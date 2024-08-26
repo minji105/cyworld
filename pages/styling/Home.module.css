@@ -1,0 +1,44 @@
+.button {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  width: min-content;
+  padding: 0 8px;
+  border: 2px solid rgb(202, 202, 202);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  font-weight: 700;
+  font-size: 16px;
+  color: rgb(6, 174, 204);
+}
+
+.container {
+  position: relative;
+}
+
+.miniroom {
+  width: 100%;
+}
+
+.minimi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 80px;
+  left: 336px;
+}
+
+.minimi img {
+  width: 72px;
+  margin-bottom: 8px;
+}
+
+.bubble {
+  width: fit-content;
+  padding: 4px 12px;
+  border: 2px solid rgb(187, 187, 187);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+

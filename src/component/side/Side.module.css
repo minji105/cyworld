@@ -1,0 +1,79 @@
+.container {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  width: 230px;
+  background-color: #fff;
+}
+
+.mySymbol {
+  padding: 10px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.symbols * {
+  border: 1px solid rgb(71, 71, 71);
+  margin-left: 8px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+}
+
+.bgm {
+  padding: 10px;
+  background-color: rgb(192, 192, 192);
+}
+
+.musicTitle {
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.musicTitle img {
+  width: 25px;
+  border-radius: 25px;
+  margin-right: 5px;
+}
+
+.rotate {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.control {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.play {
+  display: flex;
+  justify-content: space-between;
+  width: 28px;
+  font-size: 12px;
+}
+
+.play * {
+  cursor: pointer;
+}
+
+.orange {
+  color: orange;
+}

@@ -1,0 +1,70 @@
+.title {
+  color: rgb(13, 166, 212);
+  font-weight: 600;
+  padding: 8px;
+  border-bottom: 3px solid rgba(0, 130, 190, 0.6);
+}
+
+.menu img {
+  width: 16px;
+  margin-right: 8px;
+}
+
+.dropdown {
+  border-bottom: 2px solid rgb(235, 235, 235);
+  padding: 8px;
+}
+
+.dropdownBtn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  color: rgb(7, 23, 165);
+}
+
+.dropdownContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height ease-out;
+  margin-left: -12px;
+}
+
+.dropdownContent li {
+  margin: 0;
+  color: gray;
+  cursor: pointer;
+}
+.dropdownContent li.menuActive {
+  color: rgb(13, 166, 212);
+  font-weight: 600;
+}
+
+.dropdownContent li:first-child {
+  margin-top: 8px;
+}
+
+.dropdownContent.active {
+  max-height: 256px;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  padding: 0;
+  font-weight: 900;
+}
+
+.arrow.up::after {
+  content: '<';
+  display: block;
+  transform: rotate(90deg) translateY(-20%) scaleY(150%);
+  color: orangered;
+}
+
+.arrow.down::after {
+  content: '<';
+  display: block;
+  transform: rotate(270deg) translateY(-15%) scaleY(150%);
+  color: rgb(235, 235, 235);
+}
