@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import menu from './styling/MenuStyle.module.css'
 import useDropdown from '../src/hooks/useDropdown';
+import TicTacToe from "../src/projects/TicTacToe";
+import Todo from "../src/projects/Todo";
+import Mob from "../src/projects/Mob";
+import Joheesu from "../src/projects/Joheesu";
+import Cyworld from "../src/projects/Cyworld";
 
 function Projects() {
   const { activeDropdown, toggleDropdown } = useDropdown();
+  const [activeSection, setActiveSection] = useState('TicTacToe');
+
+  const handleSectionClick = (section) => {
+    setActiveSection(section);
+  };
 
   return (
     <>
@@ -12,34 +22,76 @@ function Projects() {
 
         <div className={menu.dropdown}>
           <div className={menu.dropdownBtn} onClick={() => toggleDropdown(0)}>
-            <img src="/img/folder.png" alt="" />
+            <img src="/img/folder.png" alt="folder icon" />
             Web
             <span className={`${menu.arrow} ${activeDropdown === 0 ? menu.up : menu.down}`}></span>
           </div>
           <ul className={`${menu.dropdownContent} ${activeDropdown === 0 ? menu.active : ''}`}>
-            <li>TicTacToe</li>
-            <li>Todo</li>
-            <li>Mob</li>
-            <li>Joheesu</li>
-            <li>Cyworld</li>
+            <li
+              className={`${activeSection === 'TicTacToe' ? menu.menuActive : ''}`}
+              onClick={() => handleSectionClick('TicTacToe')}>
+              TicTacToe
+            </li>
+            <li
+              className={`${activeSection === 'Todo' ? menu.menuActive : ''}`}
+              onClick={() => handleSectionClick('Todo')}>
+              Todo
+            </li>
+            <li
+              className={`${activeSection === 'Mob' ? menu.menuActive : ''}`}
+              onClick={() => handleSectionClick('Mob')}>
+              Mob
+            </li>
+            <li
+              className={`${activeSection === 'Joheesu' ? menu.menuActive : ''}`}
+              onClick={() => handleSectionClick('Joheesu')}>
+              Joheesu
+            </li>
+            <li
+              className={`${activeSection === 'Cyworld' ? menu.menuActive : ''}`}
+              onClick={() => handleSectionClick('Cyworld')}>
+              Cyworld
+            </li>
           </ul>
         </div>
 
         <div className={menu.dropdown}>
           <div className={menu.dropdownBtn} onClick={() => toggleDropdown(1)}>
-            <img src="/img/folder.png" alt="" />
+            <img src="/img/folder.png" alt="folder icon" />
             VR/AR
             <span className={`${menu.arrow} ${activeDropdown === 1 ? menu.up : menu.down}`}></span>
           </div>
           <ul className={`${menu.dropdownContent} ${activeDropdown === 1 ? menu.active : ''}`}>
-            <li>Hotel Metaverse</li>
-            <li>Hand Tracking</li>
+            <li
+              className={`${activeSection === 'Hotel Metaverse' ? menu.menuActive : ''}`}
+              onClick={() => handleSectionClick('Hotel Metaverse')}>
+              Hotel Metaverse
+            </li>
+            <li
+              className={`${activeSection === 'HandTracking' ? menu.menuActive : ''}`}
+              onClick={() => handleSectionClick('HandTracking')}>
+              HandTracking
+            </li>
           </ul>
         </div>
       </div>
 
       <div className="right-container">
-
+        {activeSection === 'TicTacToe' && (
+          <TicTacToe />
+        )}
+        {activeSection === 'Todo' && (
+          <Todo />
+        )}
+        {activeSection === 'Mob' && (
+          <Mob />
+        )}
+        {activeSection === 'Joheesu' && (
+          <Joheesu />
+        )}
+        {activeSection === 'Cyworld' && (
+          <Cyworld />
+        )}
       </div>
     </>
   )

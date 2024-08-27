@@ -18,7 +18,7 @@ function Profile() {
 
         <div className={menu.dropdown}>
           <div className={menu.dropdownBtn} onClick={() => toggleDropdown(0)}>
-            <img src="/img/folder.png" alt="profile" />
+            <img src="/img/folder.png" alt="folder icon" />
             내 소개
             <span className={`${menu.arrow} ${activeDropdown === 0 ? menu.up : menu.down}`}></span>
           </div>

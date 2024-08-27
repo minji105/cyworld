@@ -21,6 +21,7 @@
   position: relative;
   font-weight: 600;
   color: rgb(7, 23, 165);
+  cursor: pointer;
 }
 
 .dropdownContent {

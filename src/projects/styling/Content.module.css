@@ -1,0 +1,31 @@
+.header {
+  border-bottom: 2px solid rgb(214, 214, 214);
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header span {
+  color: gray;
+  font-size: 20px;
+}
+
+.link {
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.subTitle {
+  font-weight: 600;
+  border-bottom: 2px dashed rgb(214, 214, 214);
+  padding: 16px 4px 4px;
+}
+
+.subContent {
+  padding: 8px;
+}
+
+.subContent video {
+  width: 50%;
+}

@@ -1,6 +1,6 @@
 .outer {
-  width: 1104px;
-  height: 672px;
+  width: 1112px;
+  height: 680px;
   display: flex;
   align-items: center;
   position: relative;
@@ -21,7 +21,7 @@
 
 .outerRight {
   height: 100%;
-  width: 776px;
+  width: 784px;
   background-color: rgb(0, 163, 204);
   border-top: 2px solid black;
   border-right: 2px solid black;
@@ -35,17 +35,17 @@
 }
 
 .outerCover {
-  height: 644.5px;
+  height: 652px;
   width: 48px;
   background-color: rgb(0, 163, 204);
   position: absolute;
-  top: 13.5px;
+  top: 14px;
   left: 320px;
 }
 
 .inner {
-  width: 1028px;
-  height: 608px;
+  width: 1036px;
+  height: 624px;
   display: flex;
   position: absolute;
   margin-left: 41.5px;
@@ -67,7 +67,7 @@
 
 .innerRight {
   height: 100%;
-  width: 744px;
+  width: 752px;
   background-color: rgb(247, 247, 247);
   border-top: 1px solid black;
   border-right: 1px solid black;
@@ -81,7 +81,7 @@
 }
 
 .innerCover {
-  height: 582px;
+  height: 598px;
   width: 48px;
   background-color: #fff;
   position: absolute;
@@ -90,8 +90,8 @@
 }
 
 .dot {
-  width: 1044px;
-  height: 624px;
+  width: 1052px;
+  height: 640px;
   display: flex;
   position: absolute;
   margin-left: 32px;
@@ -108,7 +108,7 @@
 
 .dotRight {
   height: 100%;
-  width: 748px;
+  width: 756px;
   border-top: 2px dashed #fff;
   border-right: 2px dashed #fff;
   border-bottom: 2px dashed #fff;

@@ -3,7 +3,7 @@ import styles from './styling/SideProfile.module.css'
 function SideProfile() {
   return (
     <div className="left-container">
-      <img src="/img/profile.png" alt="profile" className={styles.profile} />
+      <img src="/img/profile.jpg" alt="profile" className={styles.profile} />
 
       <div className={styles.divider}></div>
 

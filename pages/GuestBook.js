@@ -62,7 +62,7 @@ function GuestBook() {
       <SideProfile />
 
       <div className="right-container">
-        <div className={styles.guestbook}>
+        <div className="content">
           <div className={styles.form}>
 
             <div className={styles.select}>

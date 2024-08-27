@@ -1,4 +1,4 @@
-import './Global.css';
+import './global/Global.css';
 import Diary from '../src/component/diary/Diary';
 import Side from '../src/component/side/Side';
 
