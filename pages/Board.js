@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { Editor } from '@tinymce/tinymce-react';
 import menu from './styling/MenuStyle.module.css';
 import useDropdown from '../src/hooks/useDropdown';
 
@@ -9,6 +11,14 @@ function Board() {
   const handleSectionClick = (section) => {
     setActiveSection(section);
   };
+
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/api/posts')
+      .then(res => res.json())
+      .then(data => setPosts(data));
+  }, []);
 
   return (
     <>
@@ -32,7 +42,18 @@ function Board() {
       </div>
 
       <div className="right-container">
-
+        <Link href="/Write">
+          <button>글쓰기</button>
+        </Link>
+        <ul>
+          {posts.map(post => (
+            <li key={post.title}>
+              <Link href={`/${post.title}`}>
+                {post.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   )

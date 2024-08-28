@@ -22,6 +22,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/Board.js"
     ],
+    "/GuestBook": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/GuestBook.js"
+    ],
     "/Profile": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -31,6 +36,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/Projects.js"
+    ],
+    "/Write": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Write.js"
+    ],
+    "/[postTitle]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/[postTitle].js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
