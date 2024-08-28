@@ -11,7 +11,7 @@ function Home() {
         <div className={styles.container}>
           <img src="/img/miniroom.gif" alt="miniroom" className={styles.miniroom} />
           <div className={styles.minimi}>
-            ❣
+            ♫
             <img src="/img/my-minimi.png" alt="minimi" />
             <div className={styles.bubble}>타닥타닥</div>
           </div>
