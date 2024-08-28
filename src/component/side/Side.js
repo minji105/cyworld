@@ -48,7 +48,7 @@ function Side() {
 
       <div className={styles.bgm}>
         <div className={styles.musicTitle}>
-          <img src="/img/music.png" alt="music icon" className={`${isPlaying ? styles.rotate : ''}`} />
+          <img src="/img/etc/music.png" alt="music icon" className={`${isPlaying ? styles.rotate : ''}`} />
           <span>적도 - 전기뱀장어</span>
         </div>
         <div className={styles.control}>

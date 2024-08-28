@@ -26,6 +26,33 @@
   padding: 8px;
 }
 
-.subContent video {
+.mobile video {
   width: 50%;
+}
+
+.web video {
+  width: 100%;
+}
+
+.slideContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slide img {
+  width: 576px;
+}
+
+.arrow {
+  font-size: 20px;
+  padding: 4px;
+  cursor: pointer;
 }

@@ -29,7 +29,7 @@ function TicTacToe() {
       <div className={content.subTitle}>
         <span className="orange">▸ </span>실행영상
       </div>
-      <div className={content.subContent}>
+      <div className={`${content.subContent} ${content.mobile}`}>
         <video src="/projects/tictactoe/execute.mp4" autoPlay loop muted playsInline></video>
       </div>
     </div>

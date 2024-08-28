@@ -22,11 +22,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/Board.js"
     ],
-    "/GuestBook": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/GuestBook.js"
-    ],
     "/Profile": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

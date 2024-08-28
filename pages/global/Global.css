@@ -5,7 +5,7 @@ body {
   padding: 24px;
   height: calc(100vh - 48px);
   width: calc(100vw - 48px);
-  background-image: url(../../public/img/back_pink.jpg);
+  background-image: url(../../public/img/etc/back_pink.jpg);
 }
 
 h3 {

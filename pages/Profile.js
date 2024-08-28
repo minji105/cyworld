@@ -19,7 +19,7 @@ function Profile() {
 
         <div className={menu.dropdown}>
           <div className={menu.dropdownBtn} onClick={() => toggleDropdown(0)}>
-            <img src="/img/folder.png" alt="folder icon" />
+            <div className={menu.Icon}></div>
             내 소개
             <span className={`${menu.arrow} ${activeDropdown === 0 ? menu.up : menu.down}`}></span>
           </div>
@@ -36,7 +36,7 @@ function Profile() {
       <div className="right-container">
         {activeSection === 'introduce' && (
           <div className={styles.container}>
-            <img src="/img/introduce.png" alt="my-profile" />
+            <img src="/img/etc/introduce.png" alt="my-profile" />
             <h2>안녕하세요<br />
               프론트엔드 개발자 조민지입니다.</h2>
             제 미니홈피에 방문해주셔서 감사합니다 ^^

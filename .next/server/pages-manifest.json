@@ -2,9 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/Projects": "pages/Projects.js",
   "/": "pages/index.js",
-  "/GuestBook": "pages/GuestBook.js",
+  "/Projects": "pages/Projects.js",
   "/Board": "pages/Board.js",
   "/Profile": "pages/Profile.js"
 }

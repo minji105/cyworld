@@ -6,6 +6,8 @@ import Todo from "../src/projects/Todo";
 import Mob from "../src/projects/Mob";
 import Joheesu from "../src/projects/Joheesu";
 import Cyworld from "../src/projects/Cyworld";
+import Hotel from "../src/projects/Hotel";
+import HandTracking from "../src/projects/HandTracking";
 
 function Projects() {
   const { activeDropdown, toggleDropdown } = useDropdown();
@@ -22,7 +24,7 @@ function Projects() {
 
         <div className={menu.dropdown}>
           <div className={menu.dropdownBtn} onClick={() => toggleDropdown(0)}>
-            <img src="/img/folder.png" alt="folder icon" />
+            <div className={menu.Icon}></div>
             Web
             <span className={`${menu.arrow} ${activeDropdown === 0 ? menu.up : menu.down}`}></span>
           </div>
@@ -57,7 +59,7 @@ function Projects() {
 
         <div className={menu.dropdown}>
           <div className={menu.dropdownBtn} onClick={() => toggleDropdown(1)}>
-            <img src="/img/folder.png" alt="folder icon" />
+            <div className={menu.Icon}></div>
             VR/AR
             <span className={`${menu.arrow} ${activeDropdown === 1 ? menu.up : menu.down}`}></span>
           </div>
@@ -91,6 +93,12 @@ function Projects() {
         )}
         {activeSection === 'Cyworld' && (
           <Cyworld />
+        )}
+        {activeSection === 'Hotel Metaverse' && (
+          <Hotel />
+        )}
+        {activeSection === 'HandTracking' && (
+          <HandTracking />
         )}
       </div>
     </>

@@ -1,13 +1,13 @@
 import Cover from "./Cover";
 import Ring from "./Ring";
-import Category from "./Category";
+import Index from "./Index";
 
 function Diary() {
   return (
     <div>
       <Cover />
       <Ring />
-      <Category />
+      <Index />
     </div>
   )
 }
