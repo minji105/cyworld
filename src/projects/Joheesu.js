@@ -32,7 +32,7 @@ function Joheesu() {
         <span className="orange">▸ </span>화면 구성
       </div>
       <div className={content.subContent}>
-        <table>
+        <table className={content.table}>
           <tr>
             <td>메인 화면</td>
             <td>프로젝트 목록</td>

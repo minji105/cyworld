@@ -5,14 +5,16 @@ import { Editor } from '@tinymce/tinymce-react';
 export default function Write() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const [section, setSection] = useState('React');
   const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const postData = {
-      title: title,   
-      content: content, 
+      title: title,
+      content: content,
+      section: section,
     };
 
     try {
@@ -64,6 +66,10 @@ export default function Write() {
             }}
             onEditorChange={(content) => setContent(content)}
           />
+          <select value={section} onChange={(e) => setSection(e.target.value)}>
+            <option value="React">React</option>
+            <option value="Node.js">Node.js</option>
+          </select>
           <button type="submit">저장</button>
         </form>
       </div>

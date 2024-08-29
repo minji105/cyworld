@@ -2,11 +2,11 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/Write": "pages/Write.js",
   "/Board": "pages/Board.js",
-  "/[postTitle]": "pages/[postTitle].js",
-  "/": "pages/index.js",
-  "/GuestBook": "pages/GuestBook.js",
   "/Projects": "pages/Projects.js",
-  "/Profile": "pages/Profile.js"
+  "/": "pages/index.js",
+  "/Write": "pages/Write.js",
+  "/Profile": "pages/Profile.js",
+  "/GuestBook": "pages/GuestBook.js",
+  "/[postTitle]": "pages/[postTitle].js"
 }

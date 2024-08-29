@@ -8,6 +8,7 @@ import Joheesu from "../src/projects/Joheesu";
 import Cyworld from "../src/projects/Cyworld";
 import Hotel from "../src/projects/Hotel";
 import HandTracking from "../src/projects/HandTracking";
+import Ring from '../src/component/diary/Ring';
 
 function Projects() {
   const { activeDropdown, toggleDropdown } = useDropdown();
@@ -19,6 +20,8 @@ function Projects() {
 
   return (
     <>
+      <Ring />
+      
       <div className={`left-container ${menu.menu}`}>
         <div className={menu.title}>프로젝트</div>
 

@@ -3,6 +3,7 @@ import menu from './styling/MenuStyle.module.css';
 import content from '../src/projects/styling/Content.module.css';
 import styles from './styling/Profile.module.css';
 import useDropdown from '../src/hooks/useDropdown';
+import Ring from '../src/component/diary/Ring';
 
 function Profile() {
   const { activeDropdown, toggleDropdown } = useDropdown();
@@ -14,6 +15,8 @@ function Profile() {
 
   return (
     <>
+      <Ring />
+
       <div className={`left-container ${menu.menu}`}>
         <div className={menu.title}>프로필</div>
 

@@ -1,10 +1,12 @@
 import styles from './styling/Home.module.css';
 import SideProfile from '../src/component/diary/SideProfile';
+import Ring from '../src/component/diary/Ring';
 
 function Home() {
   return (
     <>
       <SideProfile />
+      <Ring />
 
       <div className="right-container">
         <div className={styles.button}>Miniroom</div>

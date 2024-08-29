@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from './styling/GuestBook.module.css';
 import SideProfile from '../src/component/diary/SideProfile';
+import Ring from '../src/component/diary/Ring';
 
 function GuestBook() {
   const [entries, setEntries] = useState([]);
@@ -60,6 +61,7 @@ function GuestBook() {
   return (
     <>
       <SideProfile />
+      <Ring />
 
       <div className="right-container">
         <div className="content">
