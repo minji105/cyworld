@@ -53,6 +53,10 @@
   line-height: 24px;
 }
 
+.links a:hover {
+  text-decoration: underline;
+}
+
 .copied {
   position: fixed;
   transform: translate(50%, 50%);

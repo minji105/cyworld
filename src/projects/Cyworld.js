@@ -67,6 +67,7 @@ function Cyworld() {
       </div>
       <div className={content.subContent}>
         - 반응형으로 제작<br />
+        - 투데이 이모지 선택 기능<br />
       </div>
     </div>
   )

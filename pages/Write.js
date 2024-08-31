@@ -41,6 +41,10 @@ export default function Write() {
   return (
     <>
       <div className="whole-container">
+        <div className={style.buttons}>
+          <button type="button"><Link href='/Board'>취소</Link></button>
+          <button type="submit">저장</button>
+        </div>
         <form onSubmit={handleSubmit}>
           <select value={section} onChange={(e) => setSection(e.target.value)}>
             <option value="React">React</option>
@@ -59,6 +63,8 @@ export default function Write() {
             init={{
               plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
               toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+              paste_data_images: true,
+              file_picker_types: 'image',
               tinycomments_mode: 'embedded',
               tinycomments_author: 'Author name',
               mergetags_list: [
@@ -69,10 +75,6 @@ export default function Write() {
             }}
             onEditorChange={(content) => setContent(content)}
           />
-          <div className={style.buttons}>
-            <button type="button"><Link href='/Board'>취소</Link></button>
-            <button type="submit">저장</button>
-          </div>
         </form>
       </div>
     </>
