@@ -25,7 +25,7 @@ function Category() {
         프로젝트
       </div>
       <div
-        className={`${styles.index} ${getActiveClass('/Board')} ${getActiveClass('/Write')}`}
+        className={`${styles.index} ${getActiveClass('/Board')} ${getActiveClass('/Write')} ${getActiveClass('/[postTitle]')}`}
         onClick={() => router.push('/Board')}>
         게시판
       </div>

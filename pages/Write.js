@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Editor } from '@tinymce/tinymce-react';
-import style from './styling/Writer.module.css';
+import style from './styling/Write.module.css';
 
 export default function Write() {
   const [title, setTitle] = useState('');

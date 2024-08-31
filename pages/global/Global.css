@@ -8,7 +8,7 @@ body {
   background-image: url(../../public/img/etc/back_pink.jpg);
 }
 
-h3 {
+h1, h3 {
   margin: 0;
 }
 
