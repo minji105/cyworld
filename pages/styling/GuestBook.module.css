@@ -37,6 +37,12 @@
   gap: 8px;
 }
 
+.write input[type=text] {
+  height: 32px;
+  outline: none;
+  border: 2px solid rgb(214, 214, 214);
+}
+
 .submit {
   position: absolute;
   right: 0;
@@ -64,7 +70,7 @@
 
 .name {
   font-weight: 600;
-  color: rgb(0, 17, 172);
+  color: rgb(117, 132, 160);
 }
 
 .entryDate {

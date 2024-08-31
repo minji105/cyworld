@@ -3,10 +3,8 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/Board": "pages/Board.js",
-  "/Projects": "pages/Projects.js",
-  "/": "pages/index.js",
-  "/Write": "pages/Write.js",
   "/Profile": "pages/Profile.js",
-  "/GuestBook": "pages/GuestBook.js",
+  "/": "pages/index.js",
+  "/Projects": "pages/Projects.js",
   "/[postTitle]": "pages/[postTitle].js"
 }

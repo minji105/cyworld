@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Editor } from '@tinymce/tinymce-react';
+import style from './styling/Writer.module.css';
 
 export default function Write() {
   const [title, setTitle] = useState('');
@@ -38,18 +40,19 @@ export default function Write() {
 
   return (
     <>
-      <div className="left-container">
-        글쓰기 진행중 . . .
-      </div>
-
-      <div className="right-container">
+      <div className="whole-container">
         <form onSubmit={handleSubmit}>
+          <select value={section} onChange={(e) => setSection(e.target.value)}>
+            <option value="React">React</option>
+            <option value="Node.js">Node.js</option>
+          </select>
           <input
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="제목"
             required
+            className={style.title}
           />
           <Editor
             apiKey='dcuz3jq9lckyddsfzunwgrzvh5c52291hxt94bl221jmbo9p'
@@ -66,11 +69,10 @@ export default function Write() {
             }}
             onEditorChange={(content) => setContent(content)}
           />
-          <select value={section} onChange={(e) => setSection(e.target.value)}>
-            <option value="React">React</option>
-            <option value="Node.js">Node.js</option>
-          </select>
-          <button type="submit">저장</button>
+          <div className={style.buttons}>
+            <button type="button"><Link href='/Board'>취소</Link></button>
+            <button type="submit">저장</button>
+          </div>
         </form>
       </div>
     </>

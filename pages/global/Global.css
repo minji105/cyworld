@@ -128,12 +128,6 @@ input[type=range]::-webkit-slider-thumb {
   cursor: pointer;
 }
 
-input[type=text] {
-  height: 32px;
-  outline: none;
-  border: 2px solid rgb(214, 214, 214);
-}
-
 textarea {
   height: 100%;
   resize: none;
