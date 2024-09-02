@@ -42,8 +42,8 @@ export default function Write() {
     <>
       <div className="whole-container">
         <div className={style.buttons}>
-          <button type="button"><Link href='/Board'>취소</Link></button>
-          <button type="submit">저장</button>
+          <button type="button" className='nes-btn'><Link href='/Board'>취소</Link></button>
+          <button type="submit" className='nes-btn'>저장</button>
         </div>
         <form onSubmit={handleSubmit}>
           <select value={section} onChange={(e) => setSection(e.target.value)}>

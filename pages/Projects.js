@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import menu from './styling/MenuStyle.module.css'
+import styles from './styling/Projects.module.css'
 import useDropdown from '../src/hooks/useDropdown';
 import TicTacToe from "../src/projects/TicTacToe";
 import Todo from "../src/projects/Todo";
@@ -13,14 +14,30 @@ import Ring from '../src/component/diary/Ring';
 function Projects() {
   const { activeDropdown, toggleDropdown } = useDropdown();
   const [activeSection, setActiveSection] = useState('TicTacToe');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   const handleSectionClick = (section) => {
     setActiveSection(section);
   };
+  
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
+  };
 
   return (
     <>
-      <Ring />
+      <div className="whole-container">
+        <div className="content">
+          <div className={styles.header}>
+            <select name="category" id="category" value={selectedCategory} onChange={handleCategoryChange}>
+              <option value="All" selected>전체보기</option>
+              <option value="React">React</option>
+              <option value="Node.js">Node.js</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      {/* <Ring />
       
       <div className={`left-container ${menu.menu}`}>
         <div className={menu.title}>프로젝트</div>
@@ -103,7 +120,7 @@ function Projects() {
         {activeSection === 'HandTracking' && (
           <HandTracking />
         )}
-      </div>
+      </div> */}
     </>
   )
 }

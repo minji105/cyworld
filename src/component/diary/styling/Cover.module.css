@@ -35,11 +35,11 @@
 }
 
 .outerCover {
-  height: 652px;
+  height: 648px;
   width: 48px;
   background-color: rgb(0, 163, 204);
   position: absolute;
-  top: 14px;
+  top: 16px;
   left: 320px;
 }
 
@@ -81,7 +81,7 @@
 }
 
 .innerCover {
-  height: 598px;
+  height: 596px;
   width: 48px;
   background-color: #fff;
   position: absolute;

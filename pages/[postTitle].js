@@ -47,8 +47,8 @@ export default function Post() {
           <div className={style.buttons}>
             <Link href='/Board' className={style.back}>← 이전</Link>
             <div>
-              <button type='button' onClick={handleEdit}>수정</button>
-              <button type='button' onClick={handleDelete}>삭제</button>
+              <button type='button' className='nes-btn' onClick={handleEdit}>수정</button>
+              <button type='button' className='nes-btn' onClick={handleDelete}>삭제</button>
             </div>
           </div>
           <div className={style.info}>

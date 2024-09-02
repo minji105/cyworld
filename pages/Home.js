@@ -13,7 +13,7 @@ function Home() {
         <div className={styles.container}>
           <img src="/img/etc/miniroom.gif" alt="miniroom" className={styles.miniroom} />
           <div className={styles.minimi}>
-            ♫
+            <i class="nes-icon is-small heart"></i>
             <img src="/img/etc/my-minimi.png" alt="minimi" />
             <div className={styles.bubble}>타닥타닥</div>
           </div>

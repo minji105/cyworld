@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@import "../../node_modules/nes.css/css/nes.css";
+
+@font-face {
+  font-family: '둥근모꼴';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../public/font/DungGeunMo.ttf) format('truetype');
+}
 
 body {
   margin: 0;
@@ -6,9 +14,11 @@ body {
   height: calc(100vh - 48px);
   width: calc(100vw - 48px);
   background-image: url(../../public/img/etc/back_pink.jpg);
+  font-family: "둥근모꼴";
 }
 
-h1, h3 {
+h1,
+h3 {
   margin: 0;
 }
 
@@ -23,54 +33,50 @@ a {
   color: inherit;
 }
 
-.retro {
-  font-family: "Jersey 10", sans-serif;
-  letter-spacing: 1px;
-}
-
 .mint {
   color: rgb(6, 174, 204);
 }
+
 .orange {
   color: orangered;
 }
 
 .left-container {
-  height: 512px;
-  width: 232px;
-  padding: 24px;
+  height: 560px;
+  width: 288px;
+  padding: 20px;
   border: 2px solid rgb(136, 136, 136);
-  box-shadow: inset 0 0 0 16px rgb(247, 247, 247);
+  box-shadow: inset 0 0 0 12px rgb(247, 247, 247);
   border-radius: 16px;
   position: absolute;
-  top: 96px;
-  left: 74px;
+  top: 100px;
+  left: 72px;
   z-index: 10;
 }
 
 .right-container {
-  height: 528px;
-  width: 676px;
+  height: 560px;
+  width: 723px;
   padding: 16px 16px 16px 32px;
   border: 2px solid rgb(136, 136, 136);
   box-shadow: 2px 2px 2px rgba(87, 87, 87, 0.3);
   border-radius: 15px;
   background-color: #fff;
   position: absolute;
-  top: 96px;
-  left: 364px;
+  top: 100px;
+  left: 368px;
 }
 
 .whole-container {
-  height: 528px;
-  width: 966px;
+  height: 560px;
+  width: 1017px;
   padding: 16px 16px 16px 32px;
   border: 2px solid rgb(136, 136, 136);
   box-shadow: 2px 2px 2px rgba(87, 87, 87, 0.3);
   border-radius: 15px;
   background-color: #fff;
   position: absolute;
-  top: 96px;
+  top: 100px;
   left: 74px;
 }
 
@@ -99,9 +105,11 @@ a {
   background-size: auto;
   background-position: center;
 }
+
 ::-webkit-scrollbar-button:vertical:decrement {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><polygon points="5,0 0,5 10,5" fill="white"/></svg>');
 }
+
 ::-webkit-scrollbar-button:vertical:increment {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><polygon points="5,10 0,5 10,5" fill="white"/></svg>');
 }
@@ -119,23 +127,18 @@ input[type=range] {
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 16px; 
-  height: 12px; 
-  background-color: #ececec; 
+  width: 16px;
+  height: 12px;
+  background-color: #ececec;
   border: 2px solid gray;
-  border-radius: 8px; 
+  border-radius: 8px;
   box-shadow: inset -2px -5px 3px rgb(184, 184, 184);
   cursor: pointer;
 }
 
-textarea {
-  height: 100%;
-  resize: none;
-  overflow: auto;
-  border: 2px solid rgb(214, 214, 214);
-}
-textarea:focus {
-  outline: none;
+.nes-textarea,
+.nes-input {
+  border-width: 2px;
 }
 
 select {
@@ -144,4 +147,22 @@ select {
   border-radius: 4px;
   padding: 2px;
   width: 256px;
+  cursor: unset;
+}
+
+.nes-btn {
+  padding: 0;
+  margin: 0;
+  border-width: 2px;
+  width: 64px;
+}
+
+.nes-balloon {
+  padding: 0;
+  border-width: 2px;
+}
+.from-right::before,
+.from-right::after {
+  transform: scale(0.5);
+  margin-top: -6px;
 }

@@ -82,16 +82,18 @@ function GuestBook() {
                 placeholder="이름"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                className="nes-input"
               />
 
               <textarea
                 placeholder="메시지를 입력하세요..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                className="nes-textarea"
               ></textarea>
             </div>
 
-            <button className={styles.submit} onClick={handleAddEntry}>확인</button>
+            <button className={`nes-btn ${styles.submit}`} onClick={handleAddEntry}>확인</button>
           </div>
 
           <div>

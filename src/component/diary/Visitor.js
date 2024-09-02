@@ -18,15 +18,15 @@ function Visitor() {
     <div className='retro'
       style={{
         position: 'absolute',
-        top: '24px',
+        top: '20px',
         left: '47%',
         transform: 'translateX(-50%)',
         textWrap: 'nowrap',
         fontSize: '16px',
         display: 'flex'
       }}>
-      TODAY&nbsp;<span style={{ color: 'orangered', fontSize: '20px' }}>{todayVisitors}</span>&nbsp;&nbsp;|&nbsp;&nbsp;
-      TOTAL&nbsp;<span style={{ fontSize: '20px' }}>{totalVisitors}</span>
+      TODAY<span style={{ color: 'orangered', fontSize: '20px' }}>{todayVisitors}</span>&nbsp;|&nbsp;
+      TOTAL<span style={{ fontSize: '20px' }}>{totalVisitors}</span>
     </div>
   );
 };

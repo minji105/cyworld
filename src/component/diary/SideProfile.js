@@ -40,7 +40,7 @@ function SideProfile() {
 
       <div className={styles.links}>
         ├ git: <a href="https://github.com/minji105">https://github.com/minji105</a><br />
-        └ email: <span onClick={handleEmailClick} style={{ cursor: 'pointer' }}>ajhjmj9@naver.com</span>
+        └ email: <span onClick={handleEmailClick} className='nes-pointer'>ajhjmj9@naver.com</span>
         {showCopied && (
           <div
             className={styles.copied}

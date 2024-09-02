@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 8px;
-  padding: 16px 24px 32px;
+  padding: 16px 24px 36px;
   background-color: rgb(247, 247, 247);
   border-top: 2px solid rgb(214, 214, 214);
   border-bottom: 2px solid rgb(214, 214, 214);
@@ -37,21 +37,18 @@
   gap: 8px;
 }
 
-.write input[type=text] {
-  height: 32px;
-  outline: none;
-  border: 2px solid rgb(214, 214, 214);
+.write input {
+  height: 24px;
+}
+.write textarea {
+  height: 80px;
 }
 
 .submit {
   position: absolute;
-  right: 0;
+  right: 4px;
   bottom: 4px;
   transform: translateX(-24px);
-  height: 24px;
-  background-color: #fff;
-  font-weight: 600;
-  border-radius: 5px;
 }
 
 .entry {

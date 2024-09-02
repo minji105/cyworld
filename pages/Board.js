@@ -45,7 +45,7 @@ function Board() {
               <option value="Node.js">Node.js</option>
             </select>
             <Link href="/Write">
-              <button>글쓰기</button>
+              <button className='nes-btn'>글쓰기</button>
             </Link>
           </div>
 

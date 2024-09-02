@@ -9,6 +9,7 @@
     "@tinymce/tinymce-react": "^5.1.1",
     "axios": "^1.7.5",
     "mongoose": "^8.5.4",
+    "nes.css": "^2.3.0",
     "next": "^14.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
