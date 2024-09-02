@@ -39,11 +39,14 @@ function Board() {
       <div className="whole-container">
         <div className="content">
           <div className={styles.header}>
-            <select name="category" id="category" value={selectedCategory} onChange={handleCategoryChange}>
-              <option value="All" selected>전체보기</option>
-              <option value="React">React</option>
-              <option value="Node.js">Node.js</option>
-            </select>
+            <div className="nes-select">
+              <select name="category" id="category" value={selectedCategory} onChange={handleCategoryChange}>
+                <option value="All" selected>전체보기</option>
+                <option value="React">React</option>
+                <option value="Node.js">Node.js</option>
+                <option value="Git">Git</option>
+              </select>
+            </div>
             <Link href="/Write">
               <button className='nes-btn'>글쓰기</button>
             </Link>

@@ -55,14 +55,20 @@ export default function EditPost() {
   return (
     <div className="whole-container">
       <form onSubmit={handleSave}>
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="제목"
-          required
-          className={style.title}
-        />
+        <div className={style.header}>
+          <input
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="제목"
+            required
+            className={`nes-input ${style.title}`}
+          />
+          <div className={style.buttons}>
+            <Link href='/Board'><button className='nes-btn' type="button">취소</button></Link>
+            <button className='nes-btn' type="submit">저장</button>
+          </div>
+        </div>
         <Editor
           apiKey="dcuz3jq9lckyddsfzunwgrzvh5c52291hxt94bl221jmbo9p"
           value={content}
@@ -72,10 +78,6 @@ export default function EditPost() {
           }}
           onEditorChange={(newContent) => setContent(newContent)}
         />
-        <div className={style.buttons}>
-          <button type="button"><Link href='/Board'>취소</Link></button>
-          <button type="submit">저장</button>
-        </div>
       </form>
     </div>
   );

@@ -18,6 +18,7 @@ body {
 }
 
 h1,
+h2,
 h3 {
   margin: 0;
 }
@@ -137,32 +138,25 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .nes-textarea,
-.nes-input {
+.nes-input,
+.nes-select select {
   border-width: 2px;
 }
 
-select {
-  font-size: 16px;
-  border-color: rgb(190, 190, 190);
-  border-radius: 4px;
-  padding: 2px;
+.nes-input,
+.nes-select select,
+.nes-btn,
+.nes-textarea {
+  padding: 0;
+}
+
+.nes-select {
+  margin: 0;
   width: 256px;
-  cursor: unset;
 }
 
 .nes-btn {
-  padding: 0;
   margin: 0;
   border-width: 2px;
   width: 64px;
-}
-
-.nes-balloon {
-  padding: 0;
-  border-width: 2px;
-}
-.from-right::before,
-.from-right::after {
-  transform: scale(0.5);
-  margin-top: -6px;
 }

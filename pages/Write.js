@@ -41,23 +41,28 @@ export default function Write() {
   return (
     <>
       <div className="whole-container">
-        <div className={style.buttons}>
-          <button type="button" className='nes-btn'><Link href='/Board'>취소</Link></button>
-          <button type="submit" className='nes-btn'>저장</button>
-        </div>
         <form onSubmit={handleSubmit}>
-          <select value={section} onChange={(e) => setSection(e.target.value)}>
-            <option value="React">React</option>
-            <option value="Node.js">Node.js</option>
-          </select>
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder="제목"
-            required
-            className={style.title}
-          />
+          <div className={style.header}>
+            <div className="nes-select">
+              <select value={section} onChange={(e) => setSection(e.target.value)}>
+                <option value="React">React</option>
+                <option value="Node.js">Node.js</option>
+                <option value="Git">Git</option>
+              </select>
+            </div>
+            <input
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder="제목"
+              required
+              className={`nes-input ${style.title}`}
+            />
+            <div className={style.buttons}>
+              <Link href='/Board'><button type="button" className='nes-btn'>취소</button></Link>
+              <button type="submit" className='nes-btn'>저장</button>
+            </div>
+          </div>
           <Editor
             apiKey='dcuz3jq9lckyddsfzunwgrzvh5c52291hxt94bl221jmbo9p'
             init={{

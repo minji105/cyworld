@@ -19,7 +19,7 @@ function Projects() {
   const handleSectionClick = (section) => {
     setActiveSection(section);
   };
-  
+
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);
   };
@@ -29,11 +29,13 @@ function Projects() {
       <div className="whole-container">
         <div className="content">
           <div className={styles.header}>
-            <select name="category" id="category" value={selectedCategory} onChange={handleCategoryChange}>
-              <option value="All" selected>전체보기</option>
-              <option value="React">React</option>
-              <option value="Node.js">Node.js</option>
-            </select>
+            <div className="nes-select">
+              <select name="category" id="category" value={selectedCategory} onChange={handleCategoryChange}>
+                <option value="All" selected>전체보기</option>
+                <option value="React">React</option>
+                <option value="Node.js">Node.js</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>

@@ -52,7 +52,7 @@ export default function Post() {
             </div>
           </div>
           <div className={style.info}>
-            <h1>{post.title}</h1>
+            <h2>{post.title}</h2>
             <div>
               <span>작성일자: {post.createdAt}</span>
               <span style={{ marginLeft: '32px' }}>작성자: {post.writer}</span>
