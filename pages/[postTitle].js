@@ -44,15 +44,18 @@ export default function Post() {
     <>
       <div className="whole-container">
         <div className="content">
-          <div className={style.buttons}>
+          <div className={style.nav}>
             <Link href='/Board' className={style.back}>← 이전</Link>
-            <div>
+            <div className={style.buttons}>
               <button type='button' className='nes-btn' onClick={handleEdit}>수정</button>
               <button type='button' className='nes-btn' onClick={handleDelete}>삭제</button>
             </div>
           </div>
           <div className={style.info}>
-            <h2>{post.title}</h2>
+            <div>
+              <span>{post.section}</span>
+              <h2>{post.title}</h2>
+            </div>
             <div>
               <span>작성일자: {post.createdAt}</span>
               <span style={{ marginLeft: '32px' }}>작성자: {post.writer}</span>

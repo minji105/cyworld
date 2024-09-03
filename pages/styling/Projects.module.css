@@ -3,3 +3,45 @@
   border-radius: 8px;
   padding: 8px 16px;
 }
+
+.containers {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 24px;
+  font-size: 16px;
+}
+
+.container{
+  margin: 16px 0;
+  width: 288px;
+  height: 256px;
+  position: relative;
+}
+
+.container img {
+  width: 100%;
+}
+
+.stacks {
+  margin-top: 8px;
+}
+
+.explain {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  padding: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  display: none;
+  background-color: #fff;
+}
+
+.container:hover .explain {
+  display: flex;
+  color: #000;
+}

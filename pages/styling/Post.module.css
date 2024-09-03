@@ -1,11 +1,9 @@
-.buttons {
+.nav {
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  width: 934px;
-  padding-bottom: 16px;
+  width: 100%;
+  padding-top: 4px;
   text-decoration: underline;
-  background-color: #fff;
 }
 
 .back:hover {
@@ -16,19 +14,23 @@
   margin-left: 8px;
 }
 
-
 .info {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 40px 0 24px;
-  margin-bottom: 24px;
+  align-items: flex-end;
+  padding: 16px 0;
+  margin-bottom: 16px;
   border-bottom: 1px solid rgb(190, 190, 190);
 }
 .info div {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   width: fit-content;
   text-wrap: nowrap;
+}
+.info div:first-child span {
+  color: gray;
+}
+.info div:last-child {
+  align-items: flex-end;
 }

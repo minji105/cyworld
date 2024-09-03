@@ -139,7 +139,8 @@ input[type=range]::-webkit-slider-thumb {
 
 .nes-textarea,
 .nes-input,
-.nes-select select {
+.nes-select select,
+.nes-container {
   border-width: 2px;
 }
 
@@ -159,4 +160,81 @@ input[type=range]::-webkit-slider-thumb {
   margin: 0;
   border-width: 2px;
   width: 64px;
+}
+
+.nes-container {
+  padding: 16px;
+}
+
+.nes-container.with-title>.title {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.nes-badge {
+  width: 64px;
+}
+
+.nes-badge span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 0.2em #000,
+    0 -0.2em #000,
+    0.2em 0 #000,
+    -0.2em 0 #000;
+}
+
+.nes-badge span.React {
+  background-color: #5dd0ec;
+}
+
+.nes-badge span.CSS {
+  color: #fff;
+  background-color: #2e4dff;
+}
+
+.nes-badge span.GSAP {
+  background-color: #1ee917;
+}
+
+.nes-badge span.Next {
+  color: #fff;
+  background-color: #000;
+}
+
+.nes-badge span.Node {
+  background-color: #3bc947;
+}
+
+.nes-badge span.MongoDB {
+  color: #fff;
+  background-color: #36775d;
+}
+
+.nes-badge span.HTML {
+  color: #fff;
+  background-color: #eb5f0f;
+}
+
+.nes-badge span.JS {
+  background-color: #f0e227;
+}
+
+.nes-badge span.Vue {
+  color: #fff;
+  background-color: #133299;
+}
+
+.nes-badge span.Python {
+  color: #fff;
+  background-color: #4871f8;
+}
+
+.nes-badge span.C {
+  color: #fff;
+  background-color: #8670ff;
 }

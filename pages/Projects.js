@@ -1,24 +1,73 @@
 import React, { useState } from "react";
+import Link from "next/link";
 import menu from './styling/MenuStyle.module.css'
 import styles from './styling/Projects.module.css'
-import useDropdown from '../src/hooks/useDropdown';
-import TicTacToe from "../src/projects/TicTacToe";
-import Todo from "../src/projects/Todo";
-import Mob from "../src/projects/Mob";
-import Joheesu from "../src/projects/Joheesu";
-import Cyworld from "../src/projects/Cyworld";
-import Hotel from "../src/projects/Hotel";
-import HandTracking from "../src/projects/HandTracking";
-import Ring from '../src/component/diary/Ring';
+
+const projects = [
+  {
+    title: "Photographer Portfolio",
+    section: "Web",
+    link: "/projects/Joheesu",
+    img: "/projects/joheesu/main.png",
+    explain: "사진작가 포트폴리오 웹사이트입니다.",
+    stacks: ["React", "CSS", "GSAP"]
+  },
+  {
+    title: "Cyworld",
+    section: "Web",
+    link: "/projects/Cyworld",
+    img: "/projects/joheesu/main.png",
+    explain: "싸이월드를 리메이크한 제 개인 사이트입니다.",
+    stacks: ["React", "Next", "Node", "MongoDB", "CSS"]
+  },
+  {
+    title: "TicTacToe",
+    section: "Web",
+    link: "/projects/TicTacToe",
+    img: "/projects/joheesu/main.png",
+    explain: "리액트를 처음 공부하면서 만든 틱택톡 게임입니다.",
+    stacks: ["React"]
+  },
+  {
+    title: "Todo App",
+    section: "Web",
+    link: "/projects/Todo",
+    img: "/projects/joheesu/main.png",
+    explain: "뷰를 처음 공부하면서 만든 Todo App입니다.",
+    stacks: ["Vue"]
+  },
+  {
+    title: "Psycho Helmet Cult",
+    section: "Web",
+    link: "/projects/Mob",
+    img: "/projects/joheesu/main.png",
+    explain: "만화 <모브 사이코 100>에 나온 사이트를 모티브하여 만든 사이트입니다.",
+    stacks: ["HTML", "CSS", "JS"]
+  },
+  {
+    title: "Hotel Metaverse",
+    section: "AR/VR",
+    link: "/projects/HotelMetaverse",
+    img: "/projects/joheesu/main.png",
+    explain: "메타버스 기반 비대면 호텔 플레이스입니다.",
+    stacks: ["HTML", "CSS", "JS", "Node", "MongoDB"]
+  },
+  {
+    title: "Hand Tracking",
+    section: "AR/VR",
+    link: "/projects/HandTracking",
+    img: "/projects/joheesu/main.png",
+    explain: "허공 제스처를 통해 VR 환경에서 실시간 상호작용하는 방법을 연구한 것입니다.",
+    stacks: ["Python", "C"]
+  }
+]
 
 function Projects() {
-  const { activeDropdown, toggleDropdown } = useDropdown();
-  const [activeSection, setActiveSection] = useState('TicTacToe');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const handleSectionClick = (section) => {
-    setActiveSection(section);
-  };
+  const filteredProjects = selectedCategory === 'All'
+    ? projects
+    : projects.filter(project => project.section === selectedCategory)
 
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);
@@ -32,13 +81,36 @@ function Projects() {
             <div className="nes-select">
               <select name="category" id="category" value={selectedCategory} onChange={handleCategoryChange}>
                 <option value="All" selected>전체보기</option>
-                <option value="React">React</option>
-                <option value="Node.js">Node.js</option>
+                <option value="Web">Web</option>
+                <option value="AR/VR">AR/VR</option>
               </select>
             </div>
           </div>
+
+          <div className={styles.containers}>
+            {filteredProjects.map((project, index) => (
+              <Link href={project.link}>
+                <div class={`${styles.container} nes-container with-title is-centered`}>
+                  <div class="title">{project.title}</div>
+                  <img src={`${project.img}`} alt="" />
+                  <div className={styles.stacks}>
+                    {project.stacks.map((stack, index) => (
+                      <div className="nes-badge">
+                        <span className={`${stack}`}>
+                          {stack === 'Next' ? 'Next.js' : `${stack === 'Node' ? 'Node.js' : `${stack === 'C' ? 'C#' : stack}`}`}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className={styles.explain}>{project.explain}</div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
+
       {/* <Ring />
       
       <div className={`left-container ${menu.menu}`}>
