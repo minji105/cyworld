@@ -1,8 +1,11 @@
-.container {
+.side {
   position: fixed;
-  right: 30px;
+  left: 1256px;
   top: 30px;
   width: 230px;
+}
+
+.container {
   background-color: #fff;
 }
 

@@ -1,12 +1,21 @@
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import style from './styling/Post.module.css';
 
 export default function Post() {
   const router = useRouter();
   const { postTitle } = router.query;
   const [post, setPost] = useState(null);
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (postTitle) {
@@ -46,10 +55,12 @@ export default function Post() {
         <div className="content">
           <div className={style.nav}>
             <Link href='/Board' className={style.back}>← 이전</Link>
-            <div className={style.buttons}>
-              <button type='button' className='nes-btn' onClick={handleEdit}>수정</button>
-              <button type='button' className='nes-btn' onClick={handleDelete}>삭제</button>
-            </div>
+            {isLoggedIn && (
+              <div className={style.buttons}>
+                <button type='button' className='nes-btn' onClick={handleEdit}>수정</button>
+                <button type='button' className='nes-btn' onClick={handleDelete}>삭제</button>
+              </div>
+            )}
           </div>
           <div className={style.info}>
             <div>

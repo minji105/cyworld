@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import menu from './styling/MenuStyle.module.css';
-import content from '../src/projects/styling/Content.module.css';
+import content from './projects/styling/Content.module.css';
 import styles from './styling/Profile.module.css';
 import useDropdown from '../src/hooks/useDropdown';
 import Ring from '../src/component/diary/Ring';

@@ -34,6 +34,15 @@ function Board() {
     pageNumbers.push(i);
   }
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
   return (
     <>
       <div className="whole-container">
@@ -47,9 +56,11 @@ function Board() {
                 <option value="Git">Git</option>
               </select>
             </div>
-            <Link href="/Write">
-              <button className='nes-btn'>글쓰기</button>
-            </Link>
+            {isLoggedIn && (
+              <Link href="/Write">
+                <button className='nes-btn'>글쓰기</button>
+              </Link>
+            )}
           </div>
 
           <table className={styles.table}>

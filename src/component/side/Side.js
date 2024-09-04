@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from './Side.module.css';
+import Login from "../buttons/Login";
 
 function Side() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -36,48 +37,52 @@ function Side() {
   }, [volume]);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.mySymbol}>
-        <span>마이심볼</span>
-        <div className={styles.symbols}>
-          <span>🌱</span>
-          <span>🎸</span>
-          <span>🍰</span>
+    <div className={styles.side}>
+      <div className={styles.container}>
+        <div className={styles.mySymbol}>
+          <span>마이심볼</span>
+          <div className={styles.symbols}>
+            <span>🌱</span>
+            <span>🎸</span>
+            <span>🍰</span>
+          </div>
+        </div>
+
+        <div className={styles.bgm}>
+          <div className={styles.musicTitle}>
+            <img src="/img/etc/music.png" alt="music icon" className={`${isPlaying ? styles.rotate : ''}`} />
+            <span>적도 - 전기뱀장어</span>
+          </div>
+          <div className={styles.control}>
+            <div className={styles.play}>
+              <span onClick={handlePlayPause} className={`${isPlaying ? styles.orange : styles.play}`}>
+                {isPlaying ? "❚❚" : "▶"}
+              </span>
+              <span onClick={handlePause}>
+                ■
+              </span>
+            </div>
+
+            <div>
+              <label htmlFor="volume" className="retro">vol </label>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value={volume}
+                onChange={handleVolumeChange}
+                style={{
+                  background: `var(--slider-background)`
+                }}
+              />
+              <audio ref={audioRef} src="/music/bgm.mp3"></audio>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className={styles.bgm}>
-        <div className={styles.musicTitle}>
-          <img src="/img/etc/music.png" alt="music icon" className={`${isPlaying ? styles.rotate : ''}`} />
-          <span>적도 - 전기뱀장어</span>
-        </div>
-        <div className={styles.control}>
-          <div className={styles.play}>
-            <span onClick={handlePlayPause} className={`${isPlaying ? styles.orange : styles.play}`}>
-              {isPlaying ? "❚❚" : "▶"}
-            </span>
-            <span onClick={handlePause}>
-              ■
-            </span>
-          </div>
-
-          <div>
-            <label htmlFor="volume" className="retro">vol </label>
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.01"
-              value={volume}
-              onChange={handleVolumeChange}
-              style={{
-                background: `var(--slider-background)`
-              }}
-            />
-            <audio ref={audioRef} src="/music/bgm.mp3"></audio>
-          </div>
-        </div>
-      </div>
+      <Login />
     </div>
   )
 }
