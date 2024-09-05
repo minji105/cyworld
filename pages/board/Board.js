@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import styles from './styling/Board.module.css';
+import styles from '../styling/Board.module.css';
 
 function Board() {
   const [posts, setPosts] = useState([]);
@@ -57,7 +57,7 @@ function Board() {
               </select>
             </div>
             {isLoggedIn && (
-              <Link href="/Write">
+              <Link href="/board/WritePost">
                 <button className='nes-btn'>글쓰기</button>
               </Link>
             )}
@@ -77,7 +77,7 @@ function Board() {
               {currentPosts.map((post, index) => (
                 <tr key={post.title}>
                   <td className='retro'>{indexOfFirstPost + index + 1}</td>
-                  <td><Link href={`/${post.title}`}>{post.title}</Link></td>
+                  <td><Link href={`/board/${post.title}`}>{post.title}</Link></td>
                   <td>{post.writer}</td>
                   <td className='retro'>{post.createdAt}</td>
                   <td className='retro'>{post.views}</td>

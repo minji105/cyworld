@@ -2,12 +2,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Editor } from '@tinymce/tinymce-react';
-import style from './styling/Write.module.css';
+import style from '../styling/Write.module.css';
 
 export default function Write() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [section, setSection] = useState('React');
+  const [section, setSection] = useState('Web');
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -20,7 +20,7 @@ export default function Write() {
     };
 
     try {
-      const response = await fetch('http://localhost:3001/api/posts', {
+      const response = await fetch('http://localhost:3001/api/projects', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export default function Write() {
       });
 
       if (response.ok) {
-        router.push('/Board')
+        router.push('/project/Projects')
       } else {
         console.error('Failed to create post');
       }
@@ -45,9 +45,8 @@ export default function Write() {
           <div className={style.header}>
             <div className="nes-select">
               <select value={section} onChange={(e) => setSection(e.target.value)}>
-                <option value="React">React</option>
-                <option value="Node.js">Node.js</option>
-                <option value="Git">Git</option>
+                <option value="Web">Web</option>
+                <option value="AR/VR">AR/VR</option>
               </select>
             </div>
             <input
@@ -59,7 +58,7 @@ export default function Write() {
               className={`nes-input ${style.title}`}
             />
             <div className={style.buttons}>
-              <Link href='/Board'><button type="button" className='nes-btn'>취소</button></Link>
+              <Link href='/project/Projects'><button type="button" className='nes-btn'>취소</button></Link>
               <button type="submit" className='nes-btn'>저장</button>
             </div>
           </div>

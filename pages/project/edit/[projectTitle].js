@@ -2,26 +2,26 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
-import style from '../styling/Write.module.css';
+import style from '../../styling/Write.module.css';
 
 export default function EditPost() {
   const router = useRouter();
-  const { postTitle } = router.query;
-  const [post, setPost] = useState(null);
+  const { projectTitle } = router.query;
+  const [project, setProject] = useState(null);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    if (postTitle) {
-      fetch(`http://localhost:3001/api/posts/${postTitle}`)
+    if (projectTitle) {
+      fetch(`http://localhost:3001/api/projects/${projectTitle}`)
         .then(res => res.json())
         .then(data => {
-          setPost(data);
+          setProject(data);
           setTitle(data.title);
           setContent(data.content);
         });
     }
-  }, [postTitle]);
+  }, [projectTitle]);
 
   const handleSave = async (e) => {
     e.preventDefault();
@@ -32,7 +32,7 @@ export default function EditPost() {
     };
 
     try {
-      const response = await fetch(`http://localhost:3001/api/posts/${postTitle}`, {
+      const response = await fetch(`http://localhost:3001/api/projects/${projectTitle}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export default function EditPost() {
       });
 
       if (response.ok) {
-        router.push(`/Board`);
+        router.push('/project/Projects');
       } else {
         console.error('Failed to update post');
       }
@@ -50,7 +50,7 @@ export default function EditPost() {
     }
   };
 
-  if (!post) return <div>Loading...</div>;
+  if (!project) return <div>Loading...</div>;
 
   return (
     <div className="whole-container">
@@ -65,7 +65,7 @@ export default function EditPost() {
             className={`nes-input ${style.title}`}
           />
           <div className={style.buttons}>
-            <Link href='/Board'><button className='nes-btn' type="button">취소</button></Link>
+            <Link href='/project/Projects'><button className='nes-btn' type="button">취소</button></Link>
             <button className='nes-btn' type="submit">저장</button>
           </div>
         </div>

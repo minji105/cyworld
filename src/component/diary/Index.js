@@ -20,13 +20,19 @@ function Category() {
         프로필
       </div>
       <div
-        className={`${styles.index} ${getActiveClass('/Projects')}`}
-        onClick={() => router.push('/Projects')}>
+        className={`${styles.index} ${getActiveClass('/project/Projects')} 
+        ${getActiveClass('/project/WriteProject')} 
+        ${getActiveClass('/project/[projectTitle]')}
+        `}
+        onClick={() => router.push('/project/Projects')}>
         프로젝트
       </div>
       <div
-        className={`${styles.index} ${getActiveClass('/Board')} ${getActiveClass('/Write')} ${getActiveClass('/[postTitle]')}`}
-        onClick={() => router.push('/Board')}>
+        className={`${styles.index} ${getActiveClass('/board/Board')} 
+        ${getActiveClass('/board/WritePost')} 
+        ${getActiveClass('/board/[postTitle]')}
+        `}
+        onClick={() => router.push('/board/Board')}>
         게시판
       </div>
       <div

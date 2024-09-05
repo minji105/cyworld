@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import style from './styling/Post.module.css';
+import style from '../styling/Post.module.css';
 
 export default function Post() {
   const router = useRouter();
@@ -33,7 +33,7 @@ export default function Post() {
         });
 
         if (response.ok) {
-          router.push('/Board');
+          router.push('/board/Board');
         } else {
           console.error('Failed to delete post');
         }
@@ -44,7 +44,7 @@ export default function Post() {
   };
 
   const handleEdit = () => {
-    router.push(`/edit/${postTitle}`);
+    router.push(`/board/edit/${postTitle}`);
   };
 
   if (!post) return <div>Loading...</div>;
@@ -54,7 +54,7 @@ export default function Post() {
       <div className="whole-container">
         <div className="content">
           <div className={style.nav}>
-            <Link href='/Board' className={style.back}>← 이전</Link>
+            <Link href='/board/Board' className={style.back}>← 이전</Link>
             {isLoggedIn && (
               <div className={style.buttons}>
                 <button type='button' className='nes-btn' onClick={handleEdit}>수정</button>
@@ -69,7 +69,6 @@ export default function Post() {
             </div>
             <div>
               <span>작성일자: {post.createdAt}</span>
-              <span style={{ marginLeft: '32px' }}>작성자: {post.writer}</span>
             </div>
           </div>
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
