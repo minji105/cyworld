@@ -50,9 +50,24 @@ function Projects() {
 
           <div className={styles.containers}>
             {filteredProjects.map((project, index) => (
-              <tr key={project.title}>
-                <td><Link href={`/project/${project.title}`}>{project.title}</Link></td>
-              </tr>
+              <Link href={`/project/${project.title}`}>
+                <div class={`${styles.container} nes-container with-title is-centered`}>
+                  <div class="title">{project.title}</div>
+                  <img src={`http://localhost:3001/${project.mainImage}`} alt="Main Image" />
+                  <div className={styles.stacks}>
+                    {project.stack && project.stack.length > 0 ? (
+                      project.stack.map((stack, index) => (
+                        <div className="nes-badge" key={index}>
+                          <span className={`${stack}`}>
+                            {stack === 'Next' ? 'Next.js' : stack === 'Node' ? 'Node.js' : stack === 'C' ? 'C#' : stack}
+                          </span>
+                        </div>
+                      ))
+                    ) : (''
+                    )}
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

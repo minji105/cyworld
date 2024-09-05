@@ -10,6 +10,9 @@ export default function EditPost() {
   const [project, setProject] = useState(null);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const [section, setSection] = useState('');
+  const [stacks, setStacks] = useState([]);
+  const [stackInput, setStackInput] = useState('');
 
   useEffect(() => {
     if (projectTitle) {
@@ -19,25 +22,38 @@ export default function EditPost() {
           setProject(data);
           setTitle(data.title);
           setContent(data.content);
+          setSection(data.section);
+          setStacks(data.stack || []);
         });
     }
   }, [projectTitle]);
 
+  const handleStackAdd = () => {
+    if (stackInput.trim()) {
+      setStacks([...stacks, stackInput.trim()]);
+      setStackInput('');
+    }
+  };
+
+  const handleStackDelete = (index) => {
+    const newStacks = stacks.filter((_, i) => i !== index);
+    setStacks(newStacks);
+  };
+
   const handleSave = async (e) => {
     e.preventDefault();
 
-    const updatedPost = {
-      title,
-      content,
-    };
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('content', content);
+    formData.append('section', section);
+    stacks.forEach(stack => formData.append('stack', stack));
+
 
     try {
       const response = await fetch(`http://localhost:3001/api/projects/${projectTitle}`, {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(updatedPost),
+        body: formData,
       });
 
       if (response.ok) {
@@ -56,6 +72,12 @@ export default function EditPost() {
     <div className="whole-container">
       <form onSubmit={handleSave}>
         <div className={style.header}>
+          <div className="nes-select">
+            <select value={section} onChange={(e) => setSection(e.target.value)}>
+              <option value="Web">Web</option>
+              <option value="AR/VR">AR/VR</option>
+            </select>
+          </div>
           <input
             type="text"
             value={title}
@@ -78,6 +100,29 @@ export default function EditPost() {
           }}
           onEditorChange={(newContent) => setContent(newContent)}
         />
+
+        <div className={style.stack}>
+          <input
+            type="text"
+            value={stackInput}
+            onChange={(e) => setStackInput(e.target.value)}
+            placeholder="스택을 입력하세요"
+            className="nes-input"
+          />
+          <button type="button" className="nes-btn is-primary" onClick={handleStackAdd}>
+            추가
+          </button>
+
+          <div className={style.stacks}>
+            {stacks.map((stack, index) => (
+              <div key={index} className={style.stackItem}>
+                <span className="is-primary">{stack} </span>
+                <i class="nes-icon close is-small" onClick={() => handleStackDelete(index)}></i>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </form>
     </div>
   );

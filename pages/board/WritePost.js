@@ -5,10 +5,10 @@ import { Editor } from '@tinymce/tinymce-react';
 import style from '../styling/Write.module.css';
 
 export default function Write() {
+  const router = useRouter();
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [section, setSection] = useState('React');
-  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,7 +29,7 @@ export default function Write() {
       });
 
       if (response.ok) {
-        router.push('/Board')
+        router.push('/board/Board')
       } else {
         console.error('Failed to create post');
       }

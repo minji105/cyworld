@@ -10,6 +10,7 @@ export default function EditPost() {
   const [post, setPost] = useState(null);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const [section, setSection] = useState('');
 
   useEffect(() => {
     if (postTitle) {
@@ -19,6 +20,7 @@ export default function EditPost() {
           setPost(data);
           setTitle(data.title);
           setContent(data.content);
+          setSection(data.section);
         });
     }
   }, [postTitle]);
@@ -29,6 +31,7 @@ export default function EditPost() {
     const updatedPost = {
       title,
       content,
+      section,
     };
 
     try {
@@ -41,7 +44,7 @@ export default function EditPost() {
       });
 
       if (response.ok) {
-        router.push(`/Board`);
+        router.push(`/board/Board`);
       } else {
         console.error('Failed to update post');
       }
@@ -56,6 +59,13 @@ export default function EditPost() {
     <div className="whole-container">
       <form onSubmit={handleSave}>
         <div className={style.header}>
+          <div className="nes-select">
+            <select value={section} onChange={(e) => setSection(e.target.value)}>
+              <option value="React">React</option>
+              <option value="Node.js">Node.js</option>
+              <option value="Git">Git</option>
+            </select>
+          </div>
           <input
             type="text"
             value={title}

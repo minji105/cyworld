@@ -23,6 +23,7 @@ function Category() {
         className={`${styles.index} ${getActiveClass('/project/Projects')} 
         ${getActiveClass('/project/WriteProject')} 
         ${getActiveClass('/project/[projectTitle]')}
+        ${getActiveClass('/project/edit/[projectTitle]')}
         `}
         onClick={() => router.push('/project/Projects')}>
         프로젝트
@@ -31,6 +32,7 @@ function Category() {
         className={`${styles.index} ${getActiveClass('/board/Board')} 
         ${getActiveClass('/board/WritePost')} 
         ${getActiveClass('/board/[postTitle]')}
+        ${getActiveClass('/board/edit/[postTitle]')}
         `}
         onClick={() => router.push('/board/Board')}>
         게시판

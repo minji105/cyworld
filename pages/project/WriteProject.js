@@ -5,27 +5,45 @@ import { Editor } from '@tinymce/tinymce-react';
 import style from '../styling/Write.module.css';
 
 export default function Write() {
+  const router = useRouter();
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [section, setSection] = useState('Web');
-  const router = useRouter();
+  const [stacks, setStacks] = useState([]);
+  const [stackInput, setStackInput] = useState('');
+  const [mainImage, setMainImage] = useState(null);
+
+  const handleStackAdd = () => {
+    if (stackInput.trim()) {
+      setStacks([...stacks, stackInput.trim()]);
+      setStackInput('');
+    }
+  };
+
+  const handleStackDelete = (index) => {
+    const newStacks = stacks.filter((_, i) => i !== index);
+    setStacks(newStacks);
+  };
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    setMainImage(file);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const postData = {
-      title: title,
-      content: content,
-      section: section,
-    };
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('content', content);
+    formData.append('section', section);
+    formData.append('stack', JSON.stringify(stacks));
+    formData.append('mainImage', mainImage);
 
     try {
       const response = await fetch('http://localhost:3001/api/projects', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(postData),
+        body: formData,
       });
 
       if (response.ok) {
@@ -79,6 +97,33 @@ export default function Write() {
             }}
             onEditorChange={(content) => setContent(content)}
           />
+
+          <div className={style.stack}>
+            <input
+              type="text"
+              value={stackInput}
+              onChange={(e) => setStackInput(e.target.value)}
+              placeholder="스택"
+              className="nes-input"
+            />
+            <button type="button" className="nes-btn is-primary" onClick={handleStackAdd}>
+              추가
+            </button>
+
+            <div className={style.stacks}>
+              {stacks.map((stack, index) => (
+                <div key={index} className={style.stackItem}>
+                  <span className="is-primary">{stack} </span>
+                  <i class="nes-icon close is-small" onClick={() => handleStackDelete(index)}></i>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <label htmlFor="mainImage">메인 이미지 업로드:</label>
+            <input type="file" id="mainImage" onChange={handleImageUpload} />
+          </div>
         </form>
       </div>
     </>
