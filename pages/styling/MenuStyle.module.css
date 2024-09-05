@@ -62,13 +62,13 @@
 .arrow.up::after {
   content: '<';
   display: block;
-  transform: rotate(90deg) translateY(-20%) scaleY(150%);
+  transform: rotate(90deg);
   color: orangered;
 }
 
 .arrow.down::after {
   content: '<';
   display: block;
-  transform: rotate(270deg) translateY(-15%) scaleY(150%);
+  transform: rotate(270deg);
   color: rgb(235, 235, 235);
 }
