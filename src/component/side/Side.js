@@ -39,21 +39,16 @@ function Side() {
   return (
     <div className={styles.side}>
       <div className={styles.container}>
-        <div className={styles.mySymbol}>
-          <span>마이심볼</span>
-          <div className={styles.symbols}>
-            <span>🌱</span>
-            <span>🎸</span>
-            <span>🍰</span>
-          </div>
+        <div className={styles.symbol}>
+          등록된 심볼이 없습니다.
         </div>
 
-        <div className={styles.bgm}>
+        <div className={styles.musicBox}>
           <div className={styles.musicTitle}>
             <img src="/img/etc/music.png" alt="music icon" className={`${isPlaying ? styles.rotate : ''}`} />
             <span>적도 - 전기뱀장어</span>
           </div>
-          <div className={styles.control}>
+          <div className={styles.controlers}>
             <div className={styles.play}>
               <span onClick={handlePlayPause} className={`${isPlaying ? styles.orange : styles.play}`}>
                 {isPlaying ? "❚❚" : "▶"}
@@ -63,7 +58,7 @@ function Side() {
               </span>
             </div>
 
-            <div>
+            <div className={styles.volume}>
               <label htmlFor="volume" className="retro">vol </label>
               <input
                 type="range"

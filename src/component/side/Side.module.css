@@ -9,35 +9,22 @@
   background-color: #fff;
 }
 
-.mySymbol {
-  padding: 10px;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+.symbol {
+  padding: 8px;
+  text-align: center;
 }
 
-.symbols * {
-  border: 1px solid rgb(71, 71, 71);
-  margin-left: 8px;
-  padding: 2px;
-  border-radius: 5px;
-  background-color: #f3f3f3;
-}
-
-.bgm {
-  padding: 10px;
+.musicBox {
+  padding: 8px;
   background-color: rgb(192, 192, 192);
 }
 
 .musicTitle {
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
-  font-size: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .musicTitle img {
@@ -59,8 +46,9 @@
   }
 }
 
-.control {
+.controlers {
   width: 100%;
+  height: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,7 +57,7 @@
 .play {
   display: flex;
   justify-content: space-between;
-  width: 28px;
+  width: 32px;
   font-size: 12px;
 }
 
@@ -79,4 +67,8 @@
 
 .orange {
   color: orange;
+}
+
+.volume {
+  height: 24px;
 }
