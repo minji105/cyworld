@@ -38,7 +38,6 @@ function Profile() {
       <div className="right-container">
         {activeSection === 'introduce' && (
           <div className={styles.container}>
-            <img src="/img/etc/introduce.png" alt="my-profile" />
             <h2>안녕하세요<br />
               프론트엔드 개발자 조민지입니다.</h2>
             제 미니홈피에 방문해주셔서 감사합니다 ^^

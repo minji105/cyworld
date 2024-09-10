@@ -66,7 +66,7 @@ export default function Project() {
               <h2>{project.title}</h2>
               <span>{project.section}</span>
           </div>
-          <div dangerouslySetInnerHTML={{ __html: project.content }} />
+          <div dangerouslySetInnerHTML={{ __html: project.content }} style={{fontFamily: 'initial'}}/>
         </div>
       </div>
     </>
