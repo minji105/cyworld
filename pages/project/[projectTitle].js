@@ -26,6 +26,7 @@ export default function Project() {
   }, [projectTitle]);
 
   const handleDelete = async () => {
+    // eslint-disable-next-line no-restricted-globals
     if (confirm('정말로 이 게시물을 삭제하시겠습니까?')) {
       try {
         const response = await fetch(`http://localhost:3001/api/projects/${projectTitle}`, {

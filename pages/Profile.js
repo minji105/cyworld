@@ -25,7 +25,7 @@ function Profile() {
             내 소개
             <span className={`${menu.arrow} ${activeDropdown === 0 ? menu.up : menu.down}`}></span>
           </div>
-          <ul className={`${menu.dropdownContent} ${activeDropdown === 0 ? menu.active : ""}`}>
+          <ul className={`${menu.dropdownContent} ${activeDropdown === 0 ? menu.active : ''}`}>
             <li
               className={`${activeSection === 'introduce' ? menu.menuActive : ''}`}
               onClick={() => handleSectionClick('introduce')}>

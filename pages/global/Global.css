@@ -5,7 +5,7 @@
   font-family: '둥근모꼴';
   font-style: normal;
   font-weight: 400;
-  src: url(../../public/font/DungGeunMo.ttf) format('truetype');
+  src: url('/font/DungGeunMo.ttf') format('truetype');
 }
 
 body {
@@ -13,7 +13,7 @@ body {
   padding: 24px;
   height: calc(100vh - 48px);
   width: calc(100vw - 48px);
-  background-image: url(../../public/img/etc/back_pink.jpg);
+  background-image: url('/img/etc/back_pink.jpg');
   font-family: "둥근모꼴";
 }
 
@@ -26,7 +26,6 @@ h3 {
 ul,
 li {
   list-style-type: none;
-  margin: 0;
 }
 
 a {
