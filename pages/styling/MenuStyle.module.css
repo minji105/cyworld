@@ -1,12 +1,12 @@
 .title {
-  color: rgb(13, 166, 212);
+  color: var(--mint);
   font-weight: 600;
   padding: 8px;
   border-bottom: 3px solid rgba(0, 130, 190, 0.6);
 }
 
 .dropdown {
-  border-bottom: 2px solid rgb(235, 235, 235);
+  border-bottom: var(--border-lightgray);
   padding: 8px;
 }
 
@@ -15,7 +15,7 @@
   align-items: center;
   position: relative;
   font-weight: 600;
-  color: rgb(7, 23, 165);
+  color: darkblue;
   cursor: pointer;
 }
 
@@ -41,7 +41,7 @@
   cursor: pointer;
 }
 .dropdownContent li.menuActive {
-  color: rgb(13, 166, 212);
+  color: var(--mint);
   font-weight: 600;
 }
 

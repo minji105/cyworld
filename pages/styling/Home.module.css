@@ -1,8 +1,8 @@
 .title {
   font-weight: 700;
-  color: rgb(6, 174, 204);
+  color: var(--mint);
   width: 50%;
-  border-bottom: 2px solid rgb(202, 202, 202);
+  border-bottom: var(--border-gray);
 }
 
 .updatedNews {
@@ -13,7 +13,7 @@
 }
 
 .updatedNews td {
-  border: 2px solid rgb(202, 202, 202);
+  border: var(--border-gray);
   width: 164px;
   height: 32px;
   padding: 0 4px;
@@ -22,7 +22,7 @@
 .empty {
   width: 50%;
   height: 112px;
-  background-color: rgb(243, 243, 243);
+  background-color: var(--lightgray);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,7 @@
 }
 
 .total {
-  color: rgb(6, 174, 204);
+  color: var(--mint);
 }
 
 .containerTitle {
@@ -39,11 +39,11 @@
   height: 32px;
   width: min-content;
   padding: 0 8px;
-  border: 2px solid rgb(202, 202, 202);
+  border: var(--border-gray);
   border-bottom: none;
   border-radius: 8px 8px 0 0;
   font-weight: 700;
-  color: rgb(6, 174, 204);
+  color: var(--mint);
 }
 
 .container {

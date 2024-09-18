@@ -5,7 +5,7 @@
 }
 
 .divider {
-  border-bottom: 2px dashed rgb(214, 214, 214);
+  border-bottom: 2px dashed rgb(202, 202, 202);
   margin: 8px 0;
 }
 
@@ -15,15 +15,23 @@
   justify-content: center;
   width: 100%;
   height: 32px;
-  border: 2px solid rgb(180, 180, 180);
+  border: var(--border-gray);
   border-radius: 8px;
   font-size: 20px;
   margin-bottom: 8px;
 }
 
+.today span:first-child {
+  color: var(--mint);
+}
+
 .emoji {
   height: 24px;
   margin-left: 8px;
+}
+
+.introduce {
+  color: orangered;
 }
 
 .name {
@@ -37,7 +45,7 @@
 
 .gender {
   color: orangered;
-  border: 2px solid #3a3a3a;
+  border: 1px solid #000;
   border-radius: 6px;
   width: 16px;
   height: 16px;

@@ -68,7 +68,7 @@
 .innerRight {
   height: 100%;
   width: 752px;
-  background-color: rgb(247, 247, 247);
+  background-color: var(--lightgray);
   border-top: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
@@ -121,7 +121,6 @@
   position: absolute;
   top: 16px;
   left: 40px;
-  color: rgb(255, 108, 39);
+  color: orangered;
   font-size: 20px;
-  font-weight: 600;
 }

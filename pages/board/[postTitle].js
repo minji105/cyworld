@@ -55,7 +55,7 @@ export default function Post() {
       <div className="whole-container">
         <div className="content">
           <div className={style.nav}>
-            <Link href='/board/Board' className={style.back}>← 이전</Link>
+            <Link href='/board/Board'>← 이전</Link>
             {isLoggedIn && (
               <div className={style.buttons}>
                 <button type='button' className='nes-btn' onClick={handleEdit}>수정</button>

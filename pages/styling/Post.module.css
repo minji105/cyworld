@@ -6,10 +6,6 @@
   text-decoration: underline;
 }
 
-.back:hover {
-  color: blue;
-}
-
 .buttons button {
   margin-left: 8px;
 }
@@ -20,7 +16,7 @@
   align-items: flex-end;
   padding: 16px 0;
   margin-bottom: 16px;
-  border-bottom: 1px solid rgb(190, 190, 190);
+  border-bottom: var(--border-gray);
 }
 .info div {
   display: flex;

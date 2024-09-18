@@ -4,14 +4,14 @@
   justify-content: space-between;
   margin-top: 8px;
   padding: 16px 24px 36px;
-  background-color: rgb(247, 247, 247);
-  border-top: 2px solid rgb(214, 214, 214);
-  border-bottom: 2px solid rgb(214, 214, 214);
+  background-color: var(--lightgray);
+  border-top: var(--border-gray);
+  border-bottom: var(--border-gray);
 }
 
 .select {
   background-color: #fff;
-  border: 2px solid rgb(214, 214, 214);
+  border: var(--border-gray);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,9 +60,9 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  background-color: rgb(247, 247, 247);
-  border-top: 2px solid rgb(214, 214, 214);
-  border-bottom: 2px solid rgb(214, 214, 214);
+  background-color: var(--lightgray);
+  border-top: var(--border-gray);
+  border-bottom: var(--border-gray);
 }
 
 .name {

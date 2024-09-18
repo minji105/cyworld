@@ -1,5 +1,5 @@
 .header {
-  background-color: rgb(247, 247, 247);
+  background-color: var(--lightgray);
   border-radius: 8px;
   padding: 8px 16px;
   display: flex;
@@ -11,8 +11,8 @@
 
 .table {
   margin-top: 36px;
-  border-top: 2px solid rgb(190, 190, 190);
-  border-bottom: 2px solid rgb(190, 190, 190);
+  border-top: var(--border-gray);
+  border-bottom: var(--border-gray);
   width: 100%;
 }
 

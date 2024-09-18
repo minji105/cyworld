@@ -24,12 +24,12 @@ function SideProfile() {
       <div className={styles.divider}></div>
 
       <div className={styles.today}>
-        <span className='mint'>TODAY IS..</span>
+        <span>TODAY IS..</span>
         <img src="/img/etc/emoji.png" alt="happy" className={styles.emoji} />
         <span>행복</span>
       </div>
 
-      <div className='orange'>
+      <div className={styles.introduce}>
         안녕하세요. 프론트엔드 개발자 조민지입니다.<br />
         제 미니홈피에 방문해 주셔서 감사합니다. ^^/*
       </div>

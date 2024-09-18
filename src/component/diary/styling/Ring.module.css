@@ -2,7 +2,7 @@
   z-index: 1000;
   height: 10px;
   width: 36px;
-  border: 2px solid rgb(136, 136, 136);
+  border: var(--border-darkgray);
   border-radius: 8px;
   box-shadow: inset 15px 0 5px rgb(209, 209, 209);
   background-color: #fff;
