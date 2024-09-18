@@ -68,7 +68,6 @@ function Board() {
               <tr>
                 <th></th>
                 <th>제목</th>
-                <th>작성자</th>
                 <th>작성일</th>
                 <th>조회</th>
               </tr>
@@ -76,17 +75,16 @@ function Board() {
             <tbody>
               {currentPosts.map((post, index) => (
                 <tr key={post.title}>
-                  <td className='retro'>{indexOfFirstPost + index + 1}</td>
+                  <td>{indexOfFirstPost + index + 1}</td>
                   <td><Link href={`/board/${post.title}`}>{post.title}</Link></td>
-                  <td>{post.writer}</td>
-                  <td className='retro'>{post.createdAt}</td>
-                  <td className='retro'>{post.views}</td>
+                  <td>{post.createdAt}</td>
+                  <td>{post.views}</td>
                 </tr>
               ))}
             </tbody>
           </table>
 
-          <div className={`retro ${styles.pagination}`}>
+          <div className={styles.pagination}>
             {pageNumbers.map(number => (
               <div
                 key={number}

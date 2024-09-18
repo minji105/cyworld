@@ -15,7 +15,7 @@ function Visitor() {
   }, []);
 
   return (
-    <div className='retro'
+    <div
       style={{
         position: 'absolute',
         top: '20px',

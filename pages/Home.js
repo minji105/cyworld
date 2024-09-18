@@ -1,15 +1,61 @@
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import styles from './styling/Home.module.css';
 import SideProfile from '../src/component/diary/SideProfile';
 import Ring from '../src/component/diary/Ring';
 
 function Home() {
+  const [projects, setProjects] = useState([]);
+  const [posts, setPosts] = useState([]);
+  const [entries, setEntries] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/api/projects')
+      .then(res => res.json())
+      .then(data => setProjects(data));
+    fetch('http://localhost:3001/api/posts')
+      .then(res => res.json())
+      .then(data => setPosts(data));
+    fetch('http://localhost:3001/api/entries')
+      .then(res => res.json())
+      .then(data => setEntries(data));
+  }, []);
+
   return (
     <>
       <SideProfile />
       <Ring />
 
       <div className="right-container">
-        <div className={styles.button}>Miniroom</div>
+        <div className={styles.title}>Updated News</div>
+        <div className={styles.updatedNews}>
+          <div className={styles.empty}>
+            등록된 게시물이 없습니다.
+          </div>
+          <table>
+            <tr>
+              <td>
+                <Link href='/project/Projects'>프로젝트</Link>
+                <span className={styles.total}> 0/{projects.length}</span>
+              </td>
+              <td>
+                <Link href='/board/Board'>게시물</Link>
+                <span className={styles.total}> 0/{posts.length}</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Link href='/GuestBook'>방명록</Link>
+                <span className={styles.total}> 0/{entries.length}</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div className={styles.containerTitle}>Miniroom</div>
         <div className={styles.container}>
           <img src="/img/etc/miniroom.gif" alt="miniroom" className={styles.miniroom} />
           <div className={styles.minimi}>

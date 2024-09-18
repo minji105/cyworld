@@ -1,4 +1,39 @@
-.button {
+.title {
+  font-weight: 700;
+  color: rgb(6, 174, 204);
+  width: 50%;
+  border-bottom: 2px solid rgb(202, 202, 202);
+}
+
+.updatedNews {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.updatedNews td {
+  border: 2px solid rgb(202, 202, 202);
+  width: 164px;
+  height: 32px;
+  padding: 0 4px;
+}
+
+.empty {
+  width: 50%;
+  height: 112px;
+  background-color: rgb(243, 243, 243);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+}
+
+.total {
+  color: rgb(6, 174, 204);
+}
+
+.containerTitle {
   display: flex;
   align-items: center;
   height: 32px;
@@ -8,7 +43,6 @@
   border-bottom: none;
   border-radius: 8px 8px 0 0;
   font-weight: 700;
-  font-size: 16px;
   color: rgb(6, 174, 204);
 }
 

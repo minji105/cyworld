@@ -24,7 +24,7 @@ function SideProfile() {
       <div className={styles.divider}></div>
 
       <div className={styles.today}>
-        <span className='retro mint'>TODAY IS..</span>
+        <span className='mint'>TODAY IS..</span>
         <img src="/img/etc/emoji.png" alt="happy" className={styles.emoji} />
         <span>행복</span>
       </div>

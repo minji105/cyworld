@@ -37,11 +37,10 @@
   text-align: left;
 }
 .table td:nth-child(3) {
-  font-weight: 600;
-  color: rgb(132, 148, 177);
+  color: gray;
+  font-size: 20px;
 }
-.table td:nth-child(4),
-.table td:last-child {
+.table td:nth-child(4) {
   color: gray;
   font-size: 20px;
 }

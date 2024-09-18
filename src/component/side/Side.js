@@ -59,7 +59,7 @@ function Side() {
             </div>
 
             <div className={styles.volume}>
-              <label htmlFor="volume" className="retro">vol </label>
+              <label htmlFor="volume">vol </label>
               <input
                 type="range"
                 min="0"

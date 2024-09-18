@@ -100,9 +100,9 @@ function GuestBook() {
             {entries.map((entry, index) => (
               <div key={entry._id} className={styles.entry}>
                 <div className={styles.entryHeader}>
-                  <span className="retro">NO.{entries.length - index}</span>
+                  <span>NO.{entries.length - index}</span>
                   <span className={styles.name}>{entry.name}</span>
-                  <span className={`${styles.entryDate} retro`}>({entry.date})</span>
+                  <span className={styles.entryDate}>({entry.date})</span>
                 </div>
 
                 <div className={styles.entryBody}>
