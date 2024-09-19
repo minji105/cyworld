@@ -33,26 +33,30 @@ function Home() {
             등록된 게시물이 없습니다.
           </div>
           <table>
-            <tr>
-              <td>
-                <Link href='/project/Projects'>프로젝트</Link>
-                <span className={styles.total}> 0/{projects.length}</span>
-              </td>
-              <td>
-                <Link href='/board/Board'>게시물</Link>
-                <span className={styles.total}> 0/{posts.length}</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <Link href='/GuestBook'>방명록</Link>
-                <span className={styles.total}> 0/{entries.length}</span></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-            </tr>
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td>
+                  <Link href='/project/Projects'>프로젝트</Link>
+                  <span className={styles.total}> 0/{projects.length}</span>
+                </td>
+                <td>
+                  <Link href='/board/Board'>게시물</Link>
+                  <span className={styles.total}> 0/{posts.length}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <Link href='/GuestBook'>방명록</Link>
+                  <span className={styles.total}> 0/{entries.length}</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tfoot></tfoot>
           </table>
         </div>
         <div className={styles.containerTitle}>Miniroom</div>
