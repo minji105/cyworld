@@ -64,7 +64,7 @@ export default function Write() {
             </div>
           </div>
           <Editor
-            apiKey='dcuz3jq9lckyddsfzunwgrzvh5c52291hxt94bl221jmbo9p'
+            apiKey={process.env.TINYMCE_API_KEY}
             init={{
               plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
               toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',

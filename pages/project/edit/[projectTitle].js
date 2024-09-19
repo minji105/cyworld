@@ -92,7 +92,7 @@ export default function EditPost() {
           </div>
         </div>
         <Editor
-          apiKey="dcuz3jq9lckyddsfzunwgrzvh5c52291hxt94bl221jmbo9p"
+          apiKey={process.env.TINYMCE_API_KEY}
           value={content}
           init={{
             plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',

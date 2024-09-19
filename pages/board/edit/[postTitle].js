@@ -80,7 +80,7 @@ export default function EditPost() {
           </div>
         </div>
         <Editor
-          apiKey="dcuz3jq9lckyddsfzunwgrzvh5c52291hxt94bl221jmbo9p"
+          apiKey={process.env.TINYMCE_API_KEY}
           value={content}
           init={{
             plugins: 'link image code',
