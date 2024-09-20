@@ -1,4 +1,4 @@
-import styels from './styling/Ring.module.css';
+import styels from './styling/Ring.module.scss';
 
 function Ring() {
   return (

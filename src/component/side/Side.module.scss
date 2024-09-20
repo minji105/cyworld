@@ -25,12 +25,12 @@
   display: flex;
   align-items: center;
   margin-bottom: 8px;
-}
 
-.musicTitle img {
-  width: 25px;
-  border-radius: 25px;
-  margin-right: 5px;
+  img {
+    width: 25px;
+    border-radius: 25px;
+    margin-right: 5px;
+  }
 }
 
 .rotate {
@@ -59,10 +59,10 @@
   justify-content: space-between;
   width: 32px;
   font-size: 12px;
-}
 
-.play * {
-  cursor: pointer;
+  * {
+    cursor: pointer;
+  }
 }
 
 .orange {

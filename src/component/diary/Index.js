@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './styling/Category.module.css';
+import styles from './styling/Index.module.scss';
 import { useRouter } from 'next/router';
 
-function Category() {
+function Index() {
   const router = useRouter();
 
   const getActiveClass = (path) => router.pathname === path ? styles.active : '';
@@ -49,4 +49,4 @@ function Category() {
   )
 }
 
-export default Category;
+export default Index;

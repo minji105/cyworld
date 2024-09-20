@@ -17,12 +17,12 @@
   align-items: center;
   width: 128px;
   height: 128px;
-}
 
-.select img {
-  width: 70%;
-  height: 90%;
-  object-fit: contain;
+  img {
+    width: 70%;
+    height: 90%;
+    object-fit: contain;
+  }
 }
 
 .arrow {
@@ -35,13 +35,14 @@
   flex-direction: column;
   width: 440px;
   gap: 8px;
-}
 
-.write input {
-  height: 24px;
-}
-.write textarea {
-  height: 80px;
+  input {
+    height: 24px;
+  }
+
+  textarea {
+    height: 80px;
+  }
 }
 
 .submit {
@@ -78,12 +79,12 @@
   display: flex;
   justify-content: space-between;
   padding: 16px 16px 0;
-}
 
-.entryBody img {
-  width: 128px;
-  height: 128px;
-  object-fit: contain;
+  img {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+  }
 }
 
 .details {

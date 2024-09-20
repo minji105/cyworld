@@ -16,7 +16,6 @@
   position: relative;
   font-weight: 600;
   color: darkblue;
-  cursor: pointer;
 }
 
 .Icon {
@@ -33,24 +32,30 @@
   transition: max-height ease-out;
   margin-left: -12px;
   margin-bottom: 0;
-}
 
-.dropdownContent li {
-  margin: 0;
-  color: gray;
-  cursor: pointer;
-}
-.dropdownContent li.menuActive {
-  color: var(--mint);
-  font-weight: 600;
-}
+  li {
+    margin: 0;
+    color: gray;
 
-.dropdownContent li:first-child {
-  margin-top: 8px;
+    &.menuActive {
+      color: var(--mint);
+      font-weight: 600;
+    }
+
+    &:first-child {
+      margin-top: 8px;
+    }
+  }
 }
 
 .dropdownContent.active {
   max-height: 256px;
+}
+
+@mixin arrow-style($angle) {
+  content: '<';
+  display: block;
+  transform: rotate($angle);
 }
 
 .arrow {
@@ -58,18 +63,14 @@
   right: 0;
   padding: 0;
   font-weight: 900;
-}
 
-.arrow.up::after {
-  content: '<';
-  display: block;
-  transform: rotate(90deg);
-  color: orangered;
-}
+  &.up::after {
+    @include arrow-style(90deg);
+    color: orangered;
+  }
 
-.arrow.down::after {
-  content: '<';
-  display: block;
-  transform: rotate(270deg);
-  color: rgb(235, 235, 235);
+  &.down::after {
+    @include arrow-style(270deg);
+    color: rgb(235, 235, 235);
+  }
 }

@@ -5,7 +5,7 @@
 }
 
 .divider {
-  border-bottom: 2px dashed rgb(202, 202, 202);
+  border-bottom: var(--border-gray-dashed);
   margin: 8px 0;
 }
 
@@ -19,10 +19,10 @@
   border-radius: 8px;
   font-size: 20px;
   margin-bottom: 8px;
-}
 
-.today span:first-child {
-  color: var(--mint);
+  span:first-child {
+    color: var(--mint);
+  }
 }
 
 .emoji {
@@ -30,7 +30,8 @@
   margin-left: 8px;
 }
 
-.introduce {
+.introduce,
+.gender {
   color: orangered;
 }
 
@@ -44,7 +45,6 @@
 }
 
 .gender {
-  color: orangered;
   border: 1px solid #000;
   border-radius: 6px;
   width: 16px;
@@ -59,10 +59,10 @@
 .links {
   font-size: 14px;
   line-height: 24px;
-}
 
-.links a:hover {
-  text-decoration: underline;
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 .copied {

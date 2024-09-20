@@ -12,9 +12,11 @@
   /* color */
   --mint: rgb(6, 174, 204);
   --lightgray: rgb(247, 247, 247);
+  --gray: rgb(220, 220, 220);
 
   /* border */
   --border-gray: 2px solid rgb(202, 202, 202);
+  --border-gray-dashed: 2px dashed rgb(202, 202, 202);
   --border-darkgray: 2px solid rgb(136, 136, 136);
   --border-lightgray: 2px solid rgb(235, 235, 235);
 }
@@ -59,11 +61,11 @@ a {
 
 .right-container {
   height: 560px;
-  width: 723px;
+  width: 722px;
   padding: 16px 16px 16px 32px;
   border: var(--border-darkgray);
   box-shadow: 2px 2px 2px rgba(87, 87, 87, 0.3);
-  border-radius: 15px;
+  border-radius: 16px;
   background-color: #fff;
   position: absolute;
   top: 100px;
@@ -76,7 +78,7 @@ a {
   padding: 16px 16px 16px 32px;
   border: var(--border-darkgray);
   box-shadow: 2px 2px 2px rgba(87, 87, 87, 0.3);
-  border-radius: 15px;
+  border-radius: 16px;
   background-color: #fff;
   position: absolute;
   top: 100px;
@@ -98,13 +100,12 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(220, 220, 220);
+  background-color: var(--gray);
   border: var(--border-gray);
 }
 
 ::-webkit-scrollbar-button {
-  background-color: rgb(220, 220, 220);
-  border: var(--border-gray);
+  @extend ::-webkit-scrollbar-thumb;
   background-size: auto;
   background-position: center;
 }
@@ -132,10 +133,8 @@ input[type=range]::-webkit-slider-thumb {
   appearance: none;
   width: 16px;
   height: 12px;
-  background-color: #ececec;
+  background-color: var(--lightgray);
   border: 2px solid gray;
   border-radius: 8px;
   box-shadow: inset -2px -5px 3px rgb(184, 184, 184);
-  cursor: pointer;
 }
-

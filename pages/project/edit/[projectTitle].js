@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
-import style from '../../styling/Write.module.css';
+import style from '../../styling/Write.module.scss';
 
 export default function EditPost() {
   const router = useRouter();

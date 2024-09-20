@@ -1,4 +1,4 @@
-import styles from './styling/Cover.module.css';
+import styles from './styling/Cover.module.scss';
 import Visitor from './Visitor';
 
 function Cover() {

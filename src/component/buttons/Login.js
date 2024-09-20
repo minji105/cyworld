@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import style from './styling/Login.module.css'
+import style from './Login.module.scss'
 
 export default function Login() {
   const [password, setPassword] = useState('');
@@ -8,7 +8,6 @@ export default function Login() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const router = useRouter();
 
-  // 로그인 상태 확인
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
@@ -37,7 +36,7 @@ export default function Login() {
         setError('Invalid password');
       }
     } catch (error) {
-      setError('An error occurred. Please try again.');
+      setError('error occurred');
     }
   };
 

@@ -17,16 +17,19 @@
   padding: 16px 0;
   margin-bottom: 16px;
   border-bottom: var(--border-gray);
-}
-.info div {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  text-wrap: nowrap;
-}
-.info div:first-child span {
-  color: gray;
-}
-.info div:last-child {
-  align-items: flex-end;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    text-wrap: nowrap;
+
+    &:first-child span {
+      color: gray;
+    }
+
+    &:last-child {
+      align-items: flex-end;
+    }
+  }
 }

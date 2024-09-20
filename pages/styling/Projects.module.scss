@@ -3,10 +3,10 @@
   border-radius: 8px;
   padding: 8px 16px;
   display: flex;
-}
 
-.header button {
-  margin-left: 8px;
+  button {
+    margin-left: 8px;
+  }
 }
 
 .containers {
@@ -18,14 +18,14 @@
   gap: 32px;
 }
 
-.container{
+.container {
   width: 289px;
   height: 256px;
   position: relative;
-}
 
-.container img {
-  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 
 .stacks {

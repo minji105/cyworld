@@ -19,14 +19,16 @@
   gap: 8px;
 }
 
-.stack input {
-  width: 128px;
-}
+.stack {
+  input {
+    width: 128px;
+  }
 
-.stacks {
-  margin-left: 8px;
-}
+  .stacks {
+    margin-left: 8px;
 
-.stack .stacks i {
-  transform: scale(0.5);
+    i {
+      transform: scale(0.5);
+    }
+  }
 }

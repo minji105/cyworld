@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import style from '../styling/Post.module.css';
+import style from '../styling/Post.module.scss';
 
 export default function Post() {
   const router = useRouter();

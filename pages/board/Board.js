@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import styles from '../styling/Board.module.css';
+import styles from '../styling/Board.module.scss';
 
 function Board() {
   const [posts, setPosts] = useState([]);

@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    margin: 40px 0;
+  }
+}
+
+.typing {
+  white-space: pre-wrap;
+  overflow: hidden;
+  display: inline-block;
+  line-height: 2.5rem;
+  font-size: 20px;
+}

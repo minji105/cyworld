@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Editor } from '@tinymce/tinymce-react';
-import style from '../styling/Write.module.css';
+import style from '../styling/Write.module.scss';
 
 export default function Write() {
   const router = useRouter();

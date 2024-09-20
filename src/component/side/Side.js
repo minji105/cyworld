@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import styles from './Side.module.css';
+import styles from './Side.module.scss';
 import Login from "../buttons/Login";
 
 function Side() {

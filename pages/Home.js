@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import styles from './styling/Home.module.css';
+import styles from './styling/Home.module.scss';
 import SideProfile from '../src/component/diary/SideProfile';
 import Ring from '../src/component/diary/Ring';
 

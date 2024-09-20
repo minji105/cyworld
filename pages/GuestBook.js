@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import styles from './styling/GuestBook.module.css';
+import styles from './styling/GuestBook.module.scss';
 import SideProfile from '../src/component/diary/SideProfile';
 import Ring from '../src/component/diary/Ring';
 

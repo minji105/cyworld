@@ -1,4 +1,4 @@
-import './global/Global.css';
+import './global/Global.scss';
 import './global/Nes.css';
 import Diary from '../src/component/diary/Diary';
 import Side from '../src/component/side/Side';

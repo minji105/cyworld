@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './styling/SideProfile.module.css'
+import styles from './styling/SideProfile.module.scss'
 
 function SideProfile() {
   const [showCopied, setShowCopied] = useState(false);

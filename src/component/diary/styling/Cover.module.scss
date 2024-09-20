@@ -1,0 +1,114 @@
+$radius-left: 16px 48px 48px 16px;
+$radius-right: 48px 16px 16px 48px;
+
+$box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.2);
+$box-shadow-left: -2px 0px 2px rgba(0, 0, 0, 0.2), $box-shadow;
+$box-shadow-right: 2px 0px 2px rgba(0, 0, 0, 0.2), $box-shadow;
+
+@mixin box-styling($radius, $box-shadow) {
+  height: 100%;
+  border-radius: $radius;
+  border: 2px solid #000;
+  border-left: none;
+  box-shadow: $box-shadow;
+}
+
+@mixin right-box {
+  position: absolute;
+  right: 0;
+}
+
+.outer {
+  width: 1112px;
+  height: 680px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.outerLeft {
+  width: 352px;
+  background-color: rgb(0, 163, 204);
+  @include box-styling($radius-left, $box-shadow-left);
+}
+
+.outerRight {
+  width: 784px;
+  background-color: rgb(0, 163, 204);
+  @include box-styling($radius-right, $box-shadow-right);
+  @include right-box;
+}
+
+.outerCover {
+  height: 648px;
+  width: 48px;
+  background-color: rgb(0, 163, 204);
+  position: absolute;
+  top: 16px;
+  left: 320px;
+}
+
+.inner {
+  width: 1036px;
+  height: 624px;
+  display: flex;
+  position: absolute;
+  margin-left: 41.5px;
+}
+
+.innerLeft {
+  position: relative;
+  width: 312px;
+  background-color: #fff;
+  @include box-styling($radius-left, $box-shadow-left);
+}
+
+.innerRight {
+  width: 752px;
+  background-color: var(--lightgray);
+  @include box-styling($radius-right, $box-shadow-right);
+  @include right-box;
+}
+
+.innerCover {
+  height: 596px;
+  width: 48px;
+  background-color: #fff;
+  position: absolute;
+  top: 14px;
+  left: 25%;
+}
+
+.dot {
+  width: 1052px;
+  height: 640px;
+  display: flex;
+  position: absolute;
+  margin-left: 32px;
+}
+
+@mixin dot-box-styling($radius, $otherSide) {
+  height: 100%;
+  border: 2px dashed #fff;
+  border-#{$otherSide}: none;
+  border-radius: $radius;
+}
+
+.dotLeft {
+  width: 320px;
+  @include dot-box-styling($radius-left, right);
+}
+
+.dotRight {
+  width: 756px;
+  @include dot-box-styling($radius-right, left);
+  @include right-box;
+}
+
+.title {
+  position: absolute;
+  top: 16px;
+  left: 40px;
+  color: orangered;
+  font-size: 20px;
+}
