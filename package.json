@@ -26,7 +26,6 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "export": "next export",
     "test": "next test",
     "eject": "next eject",
     "lint": "next lint"
