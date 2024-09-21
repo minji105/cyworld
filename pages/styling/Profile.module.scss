@@ -1,17 +1,28 @@
 .container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 40px;
 
-  h2 {
-    margin: 40px 0;
+  .info {
+    font-size: larger;
   }
 }
 
-.typing {
-  white-space: pre-wrap;
-  overflow: hidden;
-  display: inline-block;
-  line-height: 2.5rem;
-  font-size: 20px;
+.goProject {
+  position: absolute;
+  top: 140px;
+  right: 16px;
+  animation: colorChange 2s steps(1) infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    color: orange;
+  }
+
+  50% {
+    color: violet;
+  }
 }
