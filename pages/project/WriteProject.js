@@ -41,7 +41,7 @@ export default function Write() {
     formData.append('mainImage', mainImage);
 
     try {
-      const response = await fetch('https://cyworld-server-6c304c5195d4.herokuapp.com//api/projects', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, {
         method: 'POST',
         body: formData,
       });

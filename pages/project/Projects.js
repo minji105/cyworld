@@ -8,7 +8,7 @@ function Projects() {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   useEffect(() => {
-    fetch('https://cyworld-server-6c304c5195d4.herokuapp.com//api/projects')
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`)
       .then(res => res.json())
       .then(data => setProjects(data));
   }, []);

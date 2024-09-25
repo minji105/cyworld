@@ -19,7 +19,7 @@ export default function Post() {
 
   useEffect(() => {
     if (postTitle) {
-      fetch(`https://cyworld-server-6c304c5195d4.herokuapp.com//api/posts/${postTitle}`)
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${postTitle}`)
         .then(res => res.json())
         .then(data => setPost(data));
     }
@@ -29,7 +29,7 @@ export default function Post() {
     // eslint-disable-next-line no-restricted-globals
     if (confirm('정말로 이 게시물을 삭제하시겠습니까?')) {
       try {
-        const response = await fetch(`https://cyworld-server-6c304c5195d4.herokuapp.com//api/posts/${postTitle}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${postTitle}`, {
           method: 'DELETE',
         });
 

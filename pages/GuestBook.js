@@ -11,7 +11,7 @@ function GuestBook() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    axios.get('https://cyworld-server-6c304c5195d4.herokuapp.com//api/entries')
+    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/entries`)
       .then(response => {
         console.log(response.data);
         setEntries(response.data.reverse());

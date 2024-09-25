@@ -14,7 +14,7 @@ export default function EditPost() {
 
   useEffect(() => {
     if (postTitle) {
-      fetch(`https://cyworld-server-6c304c5195d4.herokuapp.com//api/posts/${postTitle}`)
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${postTitle}`)
         .then(res => res.json())
         .then(data => {
           setPost(data);

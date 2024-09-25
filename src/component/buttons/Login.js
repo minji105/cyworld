@@ -19,7 +19,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://cyworld-server-6c304c5195d4.herokuapp.com//api/admin/login', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/admin/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

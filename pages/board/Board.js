@@ -9,7 +9,7 @@ function Board() {
   const postsPerPage = 13;
 
   useEffect(() => {
-    fetch('https://cyworld-server-6c304c5195d4.herokuapp.com//api/posts')
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`)
       .then(res => res.json())
       .then(data => setPosts(data));
   }, []);
