@@ -14,7 +14,7 @@ export default function EditPost() {
 
   useEffect(() => {
     if (postTitle) {
-      fetch(`http://localhost:3001/api/posts/${postTitle}`)
+      fetch(`https://cyworld-server-6c304c5195d4.herokuapp.com//api/posts/${postTitle}`)
         .then(res => res.json())
         .then(data => {
           setPost(data);
@@ -35,7 +35,7 @@ export default function EditPost() {
     };
 
     try {
-      const response = await fetch(`http://localhost:3001/api/posts/${postTitle}`, {
+      const response = await fetch(`https://cyworld-server-6c304c5195d4.herokuapp.com//api/posts/${postTitle}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

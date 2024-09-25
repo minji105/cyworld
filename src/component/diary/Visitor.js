@@ -5,7 +5,7 @@ function Visitor() {
   const [totalVisitors, setTotalVisitors] = useState(0);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/visit')
+    fetch('https://cyworld-server-6c304c5195d4.herokuapp.com//api/visit')
       .then(response => response.json())
       .then(data => {
         setTodayVisitors(data.todayVisitors);

@@ -20,7 +20,7 @@ export default function Write() {
     };
 
     try {
-      const response = await fetch('http://localhost:3001/api/posts', {
+      const response = await fetch('https://cyworld-server-6c304c5195d4.herokuapp.com//api/posts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

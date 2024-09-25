@@ -19,7 +19,7 @@ export default function Project() {
 
   useEffect(() => {
     if (projectTitle) {
-      fetch(`http://localhost:3001/api/projects/${projectTitle}`)
+      fetch(`https://cyworld-server-6c304c5195d4.herokuapp.com//api/projects/${projectTitle}`)
         .then(res => res.json())
         .then(data => setProject(data));
     }
@@ -29,7 +29,7 @@ export default function Project() {
     // eslint-disable-next-line no-restricted-globals
     if (confirm('정말로 이 게시물을 삭제하시겠습니까?')) {
       try {
-        const response = await fetch(`http://localhost:3001/api/projects/${projectTitle}`, {
+        const response = await fetch(`https://cyworld-server-6c304c5195d4.herokuapp.com//api/projects/${projectTitle}`, {
           method: 'DELETE',
         });
 

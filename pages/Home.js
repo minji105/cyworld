@@ -10,13 +10,13 @@ function Home() {
   const [entries, setEntries] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/projects')
+    fetch('https://cyworld-server-6c304c5195d4.herokuapp.com//api/projects')
       .then(res => res.json())
       .then(data => setProjects(data));
-    fetch('http://localhost:3001/api/posts')
+    fetch('https://cyworld-server-6c304c5195d4.herokuapp.com//api/posts')
       .then(res => res.json())
       .then(data => setPosts(data));
-    fetch('http://localhost:3001/api/entries')
+    fetch('https://cyworld-server-6c304c5195d4.herokuapp.com//api/entries')
       .then(res => res.json())
       .then(data => setEntries(data));
   }, []);
