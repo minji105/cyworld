@@ -54,7 +54,7 @@ function Projects() {
               <Link href={`/project/${project.title}`}>
                 <div class={`${styles.container} nes-container with-title is-centered`}>
                   <div class="title">{project.title}</div>
-                  <img src={`http://localhost:3001/${project.mainImage}`} alt="Main Image" />
+                  <img src={`${process.env.NEXT_PUBLIC_API_URL}/${project.mainImage}`} alt="Main Image" />
                   <div className={styles.stacks}>
                     {project.stack && project.stack.length > 0 ? (
                       project.stack.map((stack, index) => (
