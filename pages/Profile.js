@@ -52,11 +52,9 @@ function Profile() {
               새로운 기술을 배우는 것을 좋아하고 꾸준히 더 나은 코드를 작성하기 위해 노력하고 있습니다.<br />
               사용자 경혐을 최우선으로 생각하며 아름답고 직관적인 인터페이스를 만드는 것에 큰 관심을 가지고 있습니다.
             </div>
-            <div>
-
+            <div className={styles.icons}>
               <a href="https://github.com/minji105"><i className="nes-icon github "></i></a>
               <a href="https://www.instagram.com/minji_105/"><i className="nes-icon instagram "></i></a>
-
             </div>
           </div>
         )}

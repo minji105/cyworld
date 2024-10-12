@@ -52,7 +52,7 @@ function Projects() {
           <div className={styles.containers}>
             {filteredProjects.map((project, index) => (
               <Link href={`/project/${project.title}`}>
-                <div class={`${styles.container} nes-container with-title is-centered`}>
+                <div className={`${styles.container} nes-container with-title is-centered`}>
                   <div class="title">{project.title}</div>
                   <img src={`${process.env.NEXT_PUBLIC_API_URL}/${project.mainImage}`} alt="Main Image" />
                   <div className={styles.stacks}>
