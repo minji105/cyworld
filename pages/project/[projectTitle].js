@@ -4,7 +4,7 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
-import projects from "./projectData";
+import projects from "../../data/projectData";
 import style from '../styling/Post.module.scss';
 
 export default function Project() {

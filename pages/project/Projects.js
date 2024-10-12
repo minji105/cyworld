@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import projects from "./projectData";
+import projects from "../../data/projectData";
 import styles from '../styling/Projects.module.scss'
 
 function Projects() {
