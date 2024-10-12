@@ -6,10 +6,6 @@
   text-decoration: underline;
 }
 
-.buttons button {
-  margin-left: 8px;
-}
-
 .info {
   display: flex;
   justify-content: space-between;
@@ -31,5 +27,12 @@
     &:last-child {
       align-items: flex-end;
     }
+  }
+}
+
+.readme {
+  ul,
+  li {
+    list-style-type: inherit;
   }
 }

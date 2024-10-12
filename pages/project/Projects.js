@@ -1,34 +1,19 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import projects from "./projectData";
 import styles from '../styling/Projects.module.scss'
 
 function Projects() {
-  const [projects, setProjects] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
-
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`)
-      .then(res => res.json())
-      .then(data => setProjects(data));
-  }, []);
 
   const filteredProjects = selectedCategory === 'All'
     ? projects
-    : projects.filter(project => project.section === selectedCategory)
+    : projects.filter(project => project.section === selectedCategory);
 
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);
   };
-
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      setIsLoggedIn(true);
-    }
-  }, []);
 
   return (
     <>
@@ -42,11 +27,6 @@ function Projects() {
                 <option value="AR/VR">AR/VR</option>
               </select>
             </div>
-            {isLoggedIn && (
-              <Link href="/project/WriteProject">
-                <button className='nes-btn'>글쓰기</button>
-              </Link>
-            )}
           </div>
 
           <div className={styles.containers}>
@@ -54,7 +34,7 @@ function Projects() {
               <Link href={`/project/${project.title}`}>
                 <div className={`${styles.container} nes-container with-title is-centered`}>
                   <div class="title">{project.title}</div>
-                  <img src={`${process.env.NEXT_PUBLIC_API_URL}/${project.mainImage}`} alt="Main Image" />
+                  <img src={`${project.img}`} alt="Main Image" />
                   <div className={styles.stacks}>
                     {project.stack && project.stack.length > 0 ? (
                       project.stack.map((stack, index) => (
