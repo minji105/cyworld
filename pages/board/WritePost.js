@@ -1,8 +1,13 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Editor } from '@tinymce/tinymce-react';
+// import { Editor } from '@tinymce/tinymce-react';
+// import ReactQuill from "react-quill";
+import 'react-quill/dist/quill.snow.css';
 import style from '../styling/Write.module.scss';
+
+import dynamic from 'next/dynamic';
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 export default function Write() {
   const router = useRouter();
@@ -38,6 +43,16 @@ export default function Write() {
     }
   };
 
+  const modules = {
+    toolbar: {
+      container: [
+        ["image"],
+        [{ header: [1, 2, 3, 4, 5, false] }],
+        ["bold", "underline"],
+      ],
+    },
+  };
+
   return (
     <>
       <div className="whole-container">
@@ -63,22 +78,10 @@ export default function Write() {
               <button type="submit" className='nes-btn'>저장</button>
             </div>
           </div>
-          <Editor
-            apiKey={process.env.TINYMCE_API_KEY}
-            init={{
-              plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
-              toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-              paste_data_images: true,
-              file_picker_types: 'image',
-              tinycomments_mode: 'embedded',
-              tinycomments_author: 'Author name',
-              mergetags_list: [
-                { value: 'First.Name', title: 'First Name' },
-                { value: 'Email', title: 'Email' },
-              ],
-              ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
-            }}
-            onEditorChange={(content) => setContent(content)}
+          <ReactQuill
+            style={{ height: "60vh" }}
+            modules={modules}
+            onChange={setContent}
           />
         </form>
       </div>
