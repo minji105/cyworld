@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-// import { Editor } from '@tinymce/tinymce-react';
-// import ReactQuill from "react-quill";
 import 'react-quill/dist/quill.snow.css';
 import style from '../styling/Write.module.scss';
 

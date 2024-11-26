@@ -1,8 +1,11 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Editor } from '@tinymce/tinymce-react';
+import 'react-quill/dist/quill.snow.css';
 import style from '../../styling/Write.module.scss';
+
+import dynamic from 'next/dynamic';
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 export default function EditPost() {
   const router = useRouter();
@@ -55,6 +58,16 @@ export default function EditPost() {
 
   if (!post) return <div>Loading...</div>;
 
+  const modules = {
+    toolbar: {
+      container: [
+        ["image"],
+        [{ header: [1, 2, 3, 4, 5, false] }],
+        ["bold", "underline"],
+      ],
+    },
+  };
+
   return (
     <div className="whole-container">
       <form onSubmit={handleSave}>
@@ -79,14 +92,10 @@ export default function EditPost() {
             <button className='nes-btn' type="submit">저장</button>
           </div>
         </div>
-        <Editor
-          apiKey={process.env.TINYMCE_API_KEY}
-          value={content}
-          init={{
-            plugins: 'link image code',
-            toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code',
-          }}
-          onEditorChange={(newContent) => setContent(newContent)}
+        <ReactQuill
+          style={{ height: "60vh" }}
+          modules={modules}
+          onChange={setContent}
         />
       </form>
     </div>
