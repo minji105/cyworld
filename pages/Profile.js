@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 import menu from './styling/MenuStyle.module.scss';
 import styles from './styling/Profile.module.scss';
 import useDropdown from '../src/hooks/useDropdown';
@@ -30,12 +31,7 @@ function Profile() {
             <li
               className={`${activeSection === 'introduce' ? menu.menuActive : ''}`}
               onClick={() => handleSectionClick('introduce')}>
-              소개
-            </li>
-            <li
-              className={`${activeSection === 'skill' ? menu.menuActive : ''}`}
-              onClick={() => handleSectionClick('skill')}>
-              기술
+              문답
             </li>
           </ul>
         </div>
@@ -44,18 +40,55 @@ function Profile() {
       <div className="right-container">
         {activeSection === 'introduce' && (
           <div className={styles.container}>
-            <h2>안녕하세요 !<br />
-              신입 개발자 조민지입니다.</h2>
-            <div className={styles.goProject}>프로젝트 보러가기 👉</div>
-            <div className={styles.info}>
-              웹 개발에 즐거움을 느끼며 주로 React와 Next.js를 사용하여 개발합니다. <br />
-              새로운 기술을 배우는 것을 좋아하고 꾸준히 더 나은 코드를 작성하기 위해 노력하고 있습니다.<br />
-              사용자 경혐을 최우선으로 생각하며 아름답고 직관적인 인터페이스를 만드는 것에 큰 관심을 가지고 있습니다.
+            <div className={styles.answer}>
+              <b>。.☆ [ Intro ] ☆.。</b>
+              <p>
+                이름: 조민지<br />
+                생년월일: 980427<br />
+                키: 176<br />
+                혈액형: B형<br />
+                별자리: 황소자리<br />
+                성격: 차분<br />
+              </p>
+              <b>。.☆ [ Like ] ☆.。</b>
+              <p>
+                좋아하는 사람: 착한 사람<br />
+                좋아하는 일: 새벽에 영화보기<br />
+                좋아하는 색깔: 파랑<br />
+                좋아하는 음식: 너무 많음<br />
+                좋아하는 이상형: 착한 사람<br />
+                좋아하는 물건: 테블릿<br />
+                좋아하는 장소: 내 방<br />
+                좋아하는 영화장르: 다크히어로, SF<br />
+                좋아하는 노래: 밴드음악<br />
+                좋아하는 프로그램: 유퀴즈<br />
+                좋아하는 연예인: 신하균<br />
+                좋아하는 가수: HYDE<br />
+                좋아하는 동물: 나무늘보<br />
+              </p>
+              <b>。.☆ [ Now ] ☆.。</b>
+              <p>
+                현재 하는 일: 취준<br />
+                현재 목표: 취업하기<br />
+                가장 최근 울었던 일: 진격거보고 또 울었음<br />
+                가장 최근 웃었던 일: 하이도 공연 때<br />
+                현재 입은 옷: 잠옷 + 수면양말<br />
+                현재 재산: 0에 수렴하는 중<br />
+                오늘 먹은 것: 돼지고기호박짜글이<br />
+              </p>
+              <b>。.☆ [ Choose ] ☆.。</b>
+              <p>
+                밥 or 빵: 밥<br />
+                피자 or 치킨: 치킨<br />
+                구두 or 운동화: 운동화<br />
+                복고 or 걸스힙합: 복고<br />
+                발라드 or 트로트: 트로트<br />
+                댄스 or 힙합: 댄스<br />
+                보세 or 구제: 보세<br />
+                바다 or 산: 바다<br />
+              </p>
             </div>
-            <div className={styles.icons}>
-              <a href="https://github.com/minji105"><i className="nes-icon github "></i></a>
-              <a href="https://www.instagram.com/minji_105/"><i className="nes-icon instagram "></i></a>
-            </div>
+            <p>출처: <Link href="https://pann.nate.com/talk/121006139">https://pann.nate.com/talk/121006139</Link></p>
           </div>
         )}
       </div>

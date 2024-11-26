@@ -2,31 +2,9 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 40px;
-
-  .info {
-    font-size: larger;
-  }
+  overflow-y: scroll;
 }
 
-.goProject {
-  position: absolute;
-  top: 140px;
-  right: 16px;
-  animation: colorChange 2s steps(1) infinite;
-}
-
-@keyframes colorChange {
-  0% {
-    color: orange;
-  }
-
-  50% {
-    color: violet;
-  }
-}
-
-.icons a {
-  margin-right: 8px;
+.answer {
+  color: palevioletred;
 }
