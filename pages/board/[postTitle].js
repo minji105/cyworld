@@ -72,7 +72,7 @@ export default function Post() {
               <span>작성일자: {post.createdAt}</span>
             </div>
           </div>
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          <div className={style.post} dangerouslySetInnerHTML={{ __html: post.content }} />
         </div>
       </div>
     </>

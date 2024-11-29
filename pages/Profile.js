@@ -31,6 +31,11 @@ function Profile() {
             <li
               className={`${activeSection === 'introduce' ? menu.menuActive : ''}`}
               onClick={() => handleSectionClick('introduce')}>
+              소개
+            </li>
+            <li
+              className={`${activeSection === 'answers' ? menu.menuActive : ''}`}
+              onClick={() => handleSectionClick('answers')}>
               문답
             </li>
           </ul>
@@ -39,7 +44,19 @@ function Profile() {
 
       <div className="right-container">
         {activeSection === 'introduce' && (
-          <div className={styles.container}>
+          <div className={`content ${styles.container}`}>
+            <h2>안녕하세요!<br />
+            웹 개발자 조민지입니다.</h2>
+            <pre></pre>
+            <p>현재 사이트는 싸이월드를 재현하여 만든 제 개인 미니홈피입니다.<br/>
+              이력서 및 포트폴리오는 아래 사이트에서 확인해주세요.
+            </p>
+            <pre></pre>
+            <Link href="https://minjicho.netlify.app/">https://minjicho.netlify.app/</Link>
+          </div>
+        )}
+        {activeSection === 'answers' && (
+          <div className="content">
             <div className={styles.answer}>
               <b>。.☆ [ Intro ] ☆.。</b>
               <p>

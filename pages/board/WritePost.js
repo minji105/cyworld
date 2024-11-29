@@ -44,9 +44,12 @@ export default function Write() {
   const modules = {
     toolbar: {
       container: [
-        ["image"],
+        ["link", "image"],
         [{ header: [1, 2, 3, 4, 5, false] }],
-        ["bold", "underline"],
+        ["bold", "italic", "underline", "strike"],
+        [{ list: "ordered" }, { list: "bullet" }],
+        [{ color: [] }, { background: [] }],
+        [{ align: [] }],
       ],
     },
   };

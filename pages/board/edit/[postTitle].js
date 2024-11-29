@@ -38,7 +38,7 @@ export default function EditPost() {
     };
 
     try {
-      const response = await fetch(`https://cyworld-server-6c304c5195d4.herokuapp.com//api/posts/${postTitle}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${postTitle}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -61,9 +61,12 @@ export default function EditPost() {
   const modules = {
     toolbar: {
       container: [
-        ["image"],
+        ["link", "image"],
         [{ header: [1, 2, 3, 4, 5, false] }],
-        ["bold", "underline"],
+        ["bold", "italic", "underline", "strike"],
+        [{ list: "ordered" }, { list: "bullet" }],
+        [{ color: [] }, { background: [] }],
+        [{ align: [] }],
       ],
     },
   };
@@ -94,6 +97,7 @@ export default function EditPost() {
         </div>
         <ReactQuill
           style={{ height: "60vh" }}
+          value={content}
           modules={modules}
           onChange={setContent}
         />

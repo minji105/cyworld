@@ -58,6 +58,10 @@
   background-color: #2e4dff;
 }
 
+.nes-badge span.SCSS {
+  background-color: #db9cd6;
+}
+
 .nes-badge span.GSAP {
   background-color: #1ee917;
 }
