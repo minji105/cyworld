@@ -78,6 +78,7 @@ export default function EditPost() {
           <div className="nes-select">
             <select value={section} onChange={(e) => setSection(e.target.value)}>
               <option value="daily">일상</option>
+              <option value="etc">etc</option>
             </select>
           </div>
           <input

@@ -52,6 +52,7 @@ function Board() {
               <select name="category" id="category" value={selectedCategory} onChange={handleCategoryChange}>
                 <option value="All" selected>전체보기</option>
                 <option value="daily">일상</option>
+                <option value="etc">etc</option>
               </select>
             </div>
             {isLoggedIn && (
