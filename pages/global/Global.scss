@@ -9,6 +9,8 @@
 }
 
 :root {
+  --padding: 24px;
+
   /* color */
   --mint: rgb(6, 174, 204);
   --lightgray: rgb(247, 247, 247);
@@ -23,9 +25,9 @@
 
 body {
   margin: 0;
-  padding: 24px;
-  height: calc(100vh - 48px);
-  width: calc(100vw - 48px);
+  padding: var(--padding);
+  height: calc(100vh - var(--padding) * 2);
+  width: calc(100vw - var(--padding) * 2);
   background-image: url('/img/etc/back_pink.jpg');
   font-family: "둥근모꼴";
 }
