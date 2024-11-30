@@ -51,9 +51,7 @@ function Board() {
             <div className="nes-select">
               <select name="category" id="category" value={selectedCategory} onChange={handleCategoryChange}>
                 <option value="All" selected>전체보기</option>
-                <option value="React">React</option>
-                <option value="Node.js">Node.js</option>
-                <option value="Git">Git</option>
+                <option value="daily">일상</option>
               </select>
             </div>
             {isLoggedIn && (
