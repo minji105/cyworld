@@ -20,13 +20,13 @@ const projects = [
     stack: ["React", "SCSS"],
     repo: "my-port"
   },
-  // {
-  //   title: "My PT",
-  //   section: "Web",
-  //   img: "/projects/chominji.png",
-  //   stack: ["React", "Node", "MongoDB"],
-  //   repo: "my-port"
-  // }
+  {
+    title: "My PT",
+    section: "Web",
+    img: "/projects/mypt.png",
+    stack: ["React", "Node", "MongoDB"],
+    repo: "MyPT_capstone_design"
+  }
 ]
 
 export default projects;
