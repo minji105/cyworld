@@ -1,4 +1,4 @@
-<img src="https://github.com/user-attachments/assets/a0fe2d85-2994-4cab-806a-942dc087cb3f">
+<img width="100%" src="https://github.com/user-attachments/assets/a0fe2d85-2994-4cab-806a-942dc087cb3f">
 
 2000년대 대표 sns였던 싸이월드를 재현하여 미니홈피를 만들었습니다.<br/>
 url: <a href="https://courageous-taffy-868429.netlify.app/">https://courageous-taffy-868429.netlify.app</a>
