@@ -3,16 +3,13 @@ import Link from "next/link";
 import styles from './styling/Home.module.scss';
 import SideProfile from '../src/component/diary/SideProfile';
 import Ring from '../src/component/diary/Ring';
+import projects from "../data/projectData";
 
 function Home() {
-  const [projects, setProjects] = useState([]);
   const [posts, setPosts] = useState([]);
   const [entries, setEntries] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`)
-      .then(res => res.json())
-      .then(data => setProjects(data));
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`)
       .then(res => res.json())
       .then(data => setPosts(data));
