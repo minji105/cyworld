@@ -10,6 +10,10 @@ function App({ Component, pageProps }) {
       <Head>
         <meta name="title" content="조민지님의 미니홈피" />
         <meta name="description" content="싸이월드를 재현하여 만든 미니홈피입니다." />
+        <meta name="keywords" content="미니홈피, 싸이월드" />
+        <meta property="og:title" content="조민지님의 미니홈피" />
+        <meta property="og:description" content="싸이월드를 재현하여 만든 미니홈피입니다." />
+        
         <title>조민지님의 미니홈피</title>
       </Head>
       <Diary />
