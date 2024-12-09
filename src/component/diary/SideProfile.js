@@ -19,7 +19,7 @@ function SideProfile() {
 
   return (
     <div className="left-container">
-      <img src="/img/etc/profile.jpg" alt="profile" className={styles.profile} />
+      <img src="/img/etc/profile2.jpg" alt="profile" className={styles.profile} />
 
       <div className={styles.divider}></div>
 
