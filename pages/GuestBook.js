@@ -47,7 +47,7 @@ function GuestBook() {
       date: new Date().toLocaleDateString(),
     };
 
-    axios.post('http://localhost:3001/api/entries', newEntry)
+    axios.post(`${process.env.NEXT_PUBLIC_API_UR}/api/entries`, newEntry)
       .then(response => {
         setEntries([newEntry, ...entries]);
         setName("");
