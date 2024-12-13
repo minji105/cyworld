@@ -10,10 +10,10 @@ function Home() {
   const [entries, setEntries] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`)
+    fetch('/api/posts')
       .then(res => res.json())
       .then(data => setPosts(data));
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/entries`)
+    fetch('/api/entries')
       .then(res => res.json())
       .then(data => setEntries(data));
   }, []);
