@@ -8,7 +8,9 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.5",
+    "bcryptjs": "^2.4.3",
     "gsap": "^3.12.5",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.4",
     "nes.css": "^2.3.0",
     "next": "^14.2.6",
@@ -25,6 +27,7 @@
     "remark-gfm": "^4.0.0",
     "remark-html": "^16.0.1",
     "sass": "^1.79.1",
+    "sqlite3": "^5.1.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

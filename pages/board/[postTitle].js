@@ -19,7 +19,7 @@ export default function Post() {
 
   useEffect(() => {
     if (postTitle) {
-      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${postTitle}`)
+      fetch(`../api/posts/${postTitle}`)
         .then(res => res.json())
         .then(data => setPost(data));
     }

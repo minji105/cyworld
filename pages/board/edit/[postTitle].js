@@ -38,7 +38,7 @@ export default function EditPost() {
     };
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${postTitle}`, {
+      const response = await fetch(`../../api/posts/${postTitle}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -23,7 +23,7 @@ export default function Write() {
     };
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`, {
+      const response = await fetch('../api/posts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 import styles from './styling/GuestBook.module.scss';
 import SideProfile from '../src/component/diary/SideProfile';
 import Ring from '../src/component/diary/Ring';
@@ -11,13 +11,14 @@ function GuestBook() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/entries`)
-      .then(response => {
-        console.log(response.data);
-        setEntries(response.data.reverse());
+    fetch('/api/entries')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        setEntries(data.reverse());
       })
       .catch(error => {
-        console.error("There was an error fetching the guestbook entries!", error);
+        console.error(error);
       });
   }, []);
 
@@ -47,8 +48,15 @@ function GuestBook() {
       date: new Date().toLocaleDateString(),
     };
 
-    axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/entries`, newEntry)
-      .then(response => {
+    fetch('/api/entries', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newEntry),
+    })
+      .then(response => response.json())
+      .then(data => {
         setEntries([newEntry, ...entries]);
         setName("");
         setMessage("");

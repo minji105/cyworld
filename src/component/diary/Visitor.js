@@ -5,7 +5,7 @@ function Visitor() {
   const [totalVisitors, setTotalVisitors] = useState(0);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/visit`)
+    fetch('/api/visit')
       .then(response => response.json())
       .then(data => {
         setTodayVisitors(data.todayVisitors);
