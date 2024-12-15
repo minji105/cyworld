@@ -16,6 +16,9 @@
   margin: 0;
   width: 256px;
 }
+.nes-select > label {
+  display: none;
+}
 
 .nes-btn {
   margin: 0;

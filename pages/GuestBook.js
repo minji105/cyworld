@@ -85,7 +85,9 @@ function GuestBook() {
             </div>
 
             <div className={styles.write}>
+              <label htmlFor="name">이름</label>
               <input
+                id="name"
                 type="text"
                 placeholder="이름"
                 value={name}
@@ -93,7 +95,9 @@ function GuestBook() {
                 className="nes-input"
               />
 
+              <label htmlFor="content">내용</label>
               <textarea
+                id="content"
                 placeholder="메시지를 입력하세요..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}

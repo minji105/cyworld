@@ -21,6 +21,7 @@ function Projects() {
         <div className="content">
           <div className={styles.header}>
             <div className="nes-select">
+              <label htmlFor="category">카테고리</label>
               <select name="category" id="category" value={selectedCategory} onChange={handleCategoryChange}>
                 <option value="All" selected>전체보기</option>
                 <option value="Web">Web</option>

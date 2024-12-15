@@ -71,17 +71,24 @@ export default function EditPost() {
     },
   };
 
+  const handleCancelClick = () => {
+    router.push('/board/Board');
+  }
+
   return (
     <div className="whole-container">
       <form onSubmit={handleSave}>
         <div className={style.header}>
           <div className="nes-select">
-            <select value={section} onChange={(e) => setSection(e.target.value)}>
+            <label htmlFor="category">카테고리</label>
+            <select id='category' value={section} onChange={(e) => setSection(e.target.value)}>
               <option value="daily">일상</option>
               <option value="etc">etc</option>
             </select>
           </div>
+          <label htmlFor="title" style={{ display: 'none' }}>제목</label>
           <input
+            id='title'
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -90,7 +97,7 @@ export default function EditPost() {
             className={`nes-input ${style.title}`}
           />
           <div className={style.buttons}>
-            <Link href='/board/Board'><button className='nes-btn' type="button">취소</button></Link>
+            <button type="button" className='nes-btn' onClick={handleCancelClick}>취소</button>
             <button className='nes-btn' type="submit">저장</button>
           </div>
         </div>
