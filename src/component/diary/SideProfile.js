@@ -30,7 +30,7 @@ function SideProfile() {
       </div>
 
       <div className={styles.introduce}>
-        안녕하세요. 프론트엔드 개발자 조민지입니다.<br />
+        안녕하세요. 개발자 조민지입니다.<br />
         제 미니홈피에 방문해 주셔서 감사합니다. ^^/*
       </div>
 

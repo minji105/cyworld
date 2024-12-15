@@ -61,6 +61,7 @@ function Side() {
             <div className={styles.volume}>
               <label htmlFor="volume">vol </label>
               <input
+                id="volume"
                 type="range"
                 min="0"
                 max="1"

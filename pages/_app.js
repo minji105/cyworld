@@ -16,7 +16,7 @@ function App({ Component, pageProps }) {
         <meta name="google-site-verification" content="YT2ed87ec-uxvMV765Y78BYLFEs1CKVUe7xi8VH6JVw" />
         <meta property="og:title" content="조민지님의 미니홈피" />
         <meta property="og:description" content="싸이월드를 재현하여 만든 미니홈피입니다." />
-        
+        <meta charset="UTF-8"></meta>
         <title>조민지님의 미니홈피</title>
       </Head>
       <Diary />
