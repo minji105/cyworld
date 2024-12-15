@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import 'react-quill/dist/quill.snow.css';
 import style from '../../styling/Write.module.scss';
